@@ -1,0 +1,260 @@
+<!DOCTYPE html> 
+<html> 
+<head>     
+<style>
+
+    .uppercase-text {
+      text-transform: uppercase;
+    }
+    .capitalize-text {
+      text-transform: capitalize;
+    }
+
+    /* Modern Reset & Base Styles */
+    body {
+        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        background-color: #0f172a; /* Deep slate background */
+        color: #e2e8f0;
+        line-height: 1.6;
+        padding: 40px 20px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* The Card Container */
+    .recording-card {
+        background: #1e293b;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        padding: 24px;
+        margin-bottom: 30px;
+        max-width: 800px;
+        width: 100%;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Subtle colorful accent bar on the left */
+    .recording-card::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 6px;
+        background: linear-gradient(to bottom, #818cf8, #c084fc);
+    }
+
+    .recording-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Header Styling */
+    .header {
+        font-size: 1.4rem;
+        margin-top: 0;
+        margin-bottom: 18px;
+        color: #f8fafc;
+        font-weight: 700;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+    }
+
+    /* Separators */
+    .separator {
+        color: #64748b;
+        font-weight: 300;
+        padding: 0 4px;
+        font-size: 1.1rem;
+    }
+
+    /* Info Sections (Cast & Notes) */
+    .info-section {
+        margin-bottom: 16px;
+        background: rgba(255, 255, 255, 0.03);
+        padding: 12px 16px;
+        border-radius: 8px;
+    }
+
+    .info-section:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Labels */
+    .label {
+        display: block;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 0.05em;
+        color: #818cf8; /* Bright indigo accent */
+        margin-bottom: 4px;
+    }
+
+    /* Content Text */
+    .content-text, .notes-text {
+        font-size: 0.95rem;
+        color: #cbd5e1;
+    }
+
+    /* Specific styling for the cast list */
+    #cast-display {
+        display: inline-block;
+    }
+
+    /* Notes section styling */
+    .notes-text {
+        white-space: pre-line; /* Preserves line breaks in your notes */
+        font-style: italic;
+        border-left: 2px solid #475569;
+        padding-left: 12px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+        .header {
+            font-size: 1.1rem;
+        }
+        .recording-card {
+            padding: 16px;
+        }
+    }
+</style>
+</head> 
+<body>     <div class="recording-card">
+        <h2 class="header">
+            <span>Paris: a Rock Odyssey</span>
+        <span class="separator">|</span> 
+        <span>Melbourne, Australia</span>
+        <span class="separator">|</span> 
+        <span>2017-07-15</span>
+        <span class="separator">|</span> 
+        <span>Diodenes Of Catania</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">audio</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Ben Mingay (Achilles), Tim Freedman (Agamemnon), Cameron MacDonald (Ajax), Kerrie Anne Greenland (Cassandra), Scott Johnson (Hector), Madeleine Featherby (Helen), Mark Dickinson (Menelaus), Matthew Manahan (Paris), Tod Strike (Patroclus), John O'May (Priam), Brian Mannix (Sinon), John Waters (Ulysses)
+            </span>
+        </div>
+
+        
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Pinocchio (Dennis Kelly)</span>
+        <span class="separator">|</span> 
+        <span>National Theatre</span>
+        <span class="separator">|</span> 
+        <span>2017-12-01</span>
+        <span class="separator">|</span> 
+        <span>MrBraithwaite</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">audio</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Joe Idris-Roberts (Pinocchio), Audrey Brisson (Jiminy Cricket), Annette McLaughlin (Blue Fairy), David Langham (Fox), David Kirkbride (Coachman), Dawn Sievewright (Lampy), Gershwyn Eustache Jnr (Stromboli), Jack Wolfe (Danny)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        First preview.
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Sweeney Todd: The Demon Barber of Fleet Street</span>
+        <span class="separator">|</span> 
+        <span>Belfast</span>
+        <span class="separator">|</span> 
+        <span>2019-02-02</span>
+        <span class="separator">|</span> 
+        <span>IrishTrading</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">audio</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Steven Page (Sweeney Todd), Julie Mullins (Mrs. Lovett), John Porter (Anthony Hope), Jessica Hackett (Johanna), Mark O'Regan (Judge Turpin), Jack Wolfe (Tobias Ragg), Richard Croxford (Beadle Bamford), Elaine Hearty (Beggar Woman), Matthew Cavan (Adolfo Pirelli), Enda Kilroy (Jonas Fogg), Jolene O'Hara (Ensemble), Dawn Burns (Ensemble), Tommy Wallace (Ensemble), Christopher Cull (Ensemble), Enda Kilroy (Ensemble)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        Staged at the Lyric Theatre. Co-Production with Northern Ireland Opera.
+A central set piece breaks approx. 20 minutes into Act 1 and there is a show stop just before Green Finch & Linnet Bird begins. Multiple versions are circulating, including untracked MP3s (with and without album art) and tracked MP3s.
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>The Braille Legacy</span>
+        <span class="separator">|</span> 
+        <span>Off-West End</span>
+        <span class="separator">|</span> 
+        <span>2017-05-24</span>
+        <span class="separator">|</span> 
+        <span>Musicaltheatrelive</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">audio</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Jack Wolfe (Louis Braille), Ashley Stillburn (Monsieur Dufau), Jason Broderick (Gabriel), Taite-Elliot Drew (Parisian Gentleman), Will Haswell (Doctor Berger), Lottie Henshall (Rose Barbier de la Serre), Sarah-Marie Maxwell (Parisian Lady), Matthew McDonald (President of the Assembly), Kate Milner Evans (Mme. Marie Barbier de la Serre), Janet Mooney (Mme. Deschamps), Ceili O'Connor (Madame Demeziere), Michael Remick (Captain Charles Barbier de la Serre)
+            </span>
+        </div>
+
+        
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>The Magician's Elephant</span>
+        <span class="separator">|</span> 
+        <span>Royal Shakespeare Company</span>
+        <span class="separator">|</span> 
+        <span>2021-11-17</span>
+        <span class="separator">|</span> 
+        <span>Unknown</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">audio</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Suzanne Nixon (The Elephant), Rianna Ash (s/w The Elephant), Zoe Halliday (The Elephant), Forbes Masson (Police Chief), Lauren Jones (Police Officer), Sharif Afifi (Police Officer), Hannah Brown (s/w Baker), Wendy Somerville (Mrs. Griswald), Matt Bateman (s/w Doctor), Mandi Symonds (Sister Marie), Chrystine Symone (Lamplighter), Chrystine Symone (Young Police Officer), Lauren Jones (Lisette), Sharif Afifi (Milliner), Sharif Afifi (Dance Teacher), Amy Booth-Steel (The Narrator), Rianna Ash (s/w Peter's Mother), Alastair Parker (Magician), Renu Arora (Madame LaVaughn), Sam Harrison (Count Quintet), Alison Arnopp (u/s Countess Quintet), Melissa James (Gloria Matienne), Marc Antolin (Leo Matienne), Miriam Nyarko (Adele), Stephen John Davis (u/s Vilna Lutz), Jack Wolfe (Peter Duchene), Lucca Chadwick-Patel (Fishmonger), Michael Carolan (Peter's Father)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        Kind of an old-school operatic vibe as far as the music/songs go. No song list in the programme unfortunately. Jack Wolfe has an incredible vocal range!
+    </div>
+</div>
+
+    </div>    
+</body> 
+</html>
