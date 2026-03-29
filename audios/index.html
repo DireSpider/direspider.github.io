@@ -1,1541 +1,1409 @@
-<!DOCTYPE html> 
-<html> 
-<head>     
-<style>
+ <div class="recording-card">
+<h2 class="header">
+<span>Ballad Lines</span>
+<span class="separator">|</span> 
+<span>Southwark Playhouse</span>
+<span class="separator">|</span> 
+<span>2026-02-20</span>
+<span class="separator">|</span> 
+<span>bobbyskazoo</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
 
-    .uppercase-text {
-      text-transform: uppercase;
-    }
-    .capitalize-text {
-      text-transform: capitalize;
-    }
-
-    /* Modern Reset & Base Styles */
-    body {
-        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        background-color: #0f172a; /* Deep slate background */
-        color: #e2e8f0;
-        line-height: 1.6;
-        padding: 40px 20px;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* The Card Container */
-    .recording-card {
-        background: #1e293b;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 16px;
-        padding: 24px;
-        margin-bottom: 30px;
-        max-width: 800px;
-        width: 100%;
-        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-        position: relative;
-        overflow: hidden;
-    }
-
-    /* Subtle colorful accent bar on the left */
-    .recording-card::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        width: 6px;
-        background: linear-gradient(to bottom, #818cf8, #c084fc);
-    }
-
-    .recording-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.5);
-    }
-
-    /* Header Styling */
-    .header {
-        font-size: 1.4rem;
-        margin-top: 0;
-        margin-bottom: 18px;
-        color: #f8fafc;
-        font-weight: 700;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 8px;
-    }
-
-    /* Separators */
-    .separator {
-        color: #64748b;
-        font-weight: 300;
-        padding: 0 4px;
-        font-size: 1.1rem;
-    }
-
-    /* Info Sections (Cast & Notes) */
-    .info-section {
-        margin-bottom: 16px;
-        background: rgba(255, 255, 255, 0.03);
-        padding: 12px 16px;
-        border-radius: 8px;
-    }
-
-    .info-section:last-child {
-        margin-bottom: 0;
-    }
-
-    /* Labels */
-    .label {
-        display: block;
-        text-transform: uppercase;
-        font-size: 0.75rem;
-        font-weight: 800;
-        letter-spacing: 0.05em;
-        color: #818cf8; /* Bright indigo accent */
-        margin-bottom: 4px;
-    }
-
-    /* Content Text */
-    .content-text, .notes-text {
-        font-size: 0.95rem;
-        color: #cbd5e1;
-    }
-
-    /* Specific styling for the cast list */
-    #cast-display {
-        display: inline-block;
-    }
-
-    /* Notes section styling */
-    .notes-text {
-        white-space: pre-line; /* Preserves line breaks in your notes */
-        font-style: italic;
-        border-left: 2px solid #475569;
-        padding-left: 12px;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 600px) {
-        .header {
-            font-size: 1.1rem;
-        }
-        .recording-card {
-            padding: 16px;
-        }
-    }
-</style>
-</head> 
-<body>     <div class="recording-card">
-        <h2 class="header">
-            <span>Ballad Lines</span>
-        <span class="separator">|</span> 
-        <span>Southwark Playhouse</span>
-        <span class="separator">|</span> 
-        <span>2026-02-20</span>
-        <span class="separator">|</span> 
-        <span>bobbyskazoo</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Frances McNamee (Sarah), Rebecca Trehearn (Betty), Sydney Sainté (Alix), Kirsty Findlay (Cait), Ally Kennard (Jamie), Ally Kennard (Thomas), Ally Kennard (Ronan), Yna Tresvalles (Jean), Gracie Lai (Morna), Siân Louise Dowdalls (Shona), Siân Louise Dowdalls (Ancestor), Gracie Lai (Ancestor)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Concerts (Miscellaneous)</span>
-        <span class="separator">|</span> 
-        <span>Tom Kitt: Reflections</span>
-        <span class="separator">|</span> 
-        <span>2023-08-07</span>
-        <span class="separator">|</span> 
-        <span>juniper47</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Tom Kitt (Performer), Eleanor Worthington-Cox (g/p Performer), Jack Wolfe (g/p Performer), Kerry Ellis (g/p Performer), Caissie Levy (g/p Performer)
-            </span>
-        </div>
-
-        
 <div class="info-section">
-    <span class="label">Notes:</span>
-    <div class="notes-text">
-        Recorded by a friend; edited, tracked, and released by juniper47. Zip file includes tracked and untracked .mp3 files.
-    </div>
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Frances McNamee (Sarah), Rebecca Trehearn (Betty), Sydney Sainté (Alix), Kirsty Findlay (Cait), Ally Kennard (Jamie), Ally Kennard (Thomas), Ally Kennard (Ronan), Yna Tresvalles (Jean), Gracie Lai (Morna), Siân Louise Dowdalls (Shona), Siân Louise Dowdalls (Ancestor), Gracie Lai (Ancestor)
+</span>
 </div>
 
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Australian Tour</span>
-        <span class="separator">|</span> 
-        <span>2025-05-28</span>
-        <span class="separator">|</span> 
-        <span>Wombatinee</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
 
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Noah Mullins (Orpheus), Afua Adjei (u/s Eurydice), Elenoa Rokobaro (Persephone), Adrian Tamburini (Hades), Christine Anu (Hermes), Sarah Murr (Fate), Imani Williams (Fate), Jennifer Trijo (Fate), Eliza Soriano (Worker), Jessie Monk (s/w Worker), Jack Lyall (s/w Worker), Joe Gaudion (Worker), Devon Braithwaite (Worker)
-            </span>
-        </div>
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Concerts (Miscellaneous)</span>
+<span class="separator">|</span> 
+<span>Tom Kitt: Reflections</span>
+<span class="separator">|</span> 
+<span>2023-08-07</span>
+<span class="separator">|</span> 
+<span>juniper47</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
 
-        
 <div class="info-section">
-    <span class="label">Notes:</span>
-    <div class="notes-text">
-        Band: Laura Tipoki (Conductor / Keys / Accordion), Olie Powell (Bass), Griffin Youngs (Trombone / Glockenspiel), Shane Lestideau (Violin), Kieran Rafferty (Drums / Percussion), Lauren Jennings (Cello), Ash Griffin (Guitar)
-    </div>
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Tom Kitt (Performer), Eleanor Worthington-Cox (g/p Performer), Jack Wolfe (g/p Performer), Kerry Ellis (g/p Performer), Caissie Levy (g/p Performer)
+</span>
 </div>
 
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Australian Tour</span>
-        <span class="separator">|</span> 
-        <span>2025-07-13</span>
-        <span class="separator">|</span> 
-        <span>Wombatinee</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
 
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Noah Mullins (Orpheus), Eliza Soriano (u/s Eurydice), Elenoa Rokobaro (Persephone), Adrian Tamburini (Hades), Christine Anu (Hermes), Sarah Murr (Fate), Jennifer Trijo (Fate), Imani Williams (Fate), Romina Villafranca (Worker), Afua Adjei (Worker), Sam Richardson (Worker), Joe Gaudion (Worker), Devon Braithwaite (Worker)
-            </span>
-        </div>
-
-        
 <div class="info-section">
-    <span class="label">Notes:</span>
-    <div class="notes-text">
-        Band: Laura Tipoki (Conductor / Keys / Accordion), Olie Powell (Bass), Griffin Youngs (Trombone / Glockenspiel), Shane Lestideau (Violin), Kieran Rafferty (Drums / Percussion), Lauren Jennings (Cello), Ash Griffin (Guitar)
-    </div>
+<span class="label">Notes:</span>
+<div class="notes-text">
+ Recorded by a friend; edited, tracked, and released by juniper47. Zip file includes tracked and untracked .mp3 files.
+</div>
 </div>
 
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2025-09-02</span>
-        <span class="separator">|</span> 
-        <span>bobbyskazoo</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Australian Tour</span>
+<span class="separator">|</span> 
+<span>2025-05-28</span>
+<span class="separator">|</span> 
+<span>Wombatinee</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
 
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Shea Renne (Fate), Jessie Shelton (Fate), Kay Trinidad (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Alex Puette (Worker)
-            </span>
-        </div>
-
-        
 <div class="info-section">
-    <span class="label">Notes:</span>
-    <div class="notes-text">
-        Band: Brian Drye (Trombone), Terrence Thornhill (Cello sub), Dana Lyn (Violin), Tony Mason (Drums sub), Chris Tordini (Bass), Ilusha Tsinadze (Guitar), Liam Robinson (Keys)
-    </div>
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Noah Mullins (Orpheus), Afua Adjei (u/s Eurydice), Elenoa Rokobaro (Persephone), Adrian Tamburini (Hades), Christine Anu (Hermes), Sarah Murr (Fate), Imani Williams (Fate), Jennifer Trijo (Fate), Eliza Soriano (Worker), Jessie Monk (s/w Worker), Jack Lyall (s/w Worker), Joe Gaudion (Worker), Devon Braithwaite (Worker)
+</span>
 </div>
 
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2025-09-02</span>
-        <span class="separator">|</span> 
-        <span>aclaretonhand</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
 
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Shea Renne (Fate), Jessie Shelton (Fate), Kay Trinidad (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Alex Puette (Worker)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2025-09-04</span>
-        <span class="separator">|</span> 
-        <span>rosescrescit</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2025-10-03</span>
-        <span class="separator">|</span> 
-        <span>Habs</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Eddie Noel Rodríguez (u/s Hermes), Marla Louissaint (Fate), Jessie Shelton (Fate), Kay Trinidad (Fate), Emily Afton (Worker), Tanner Ray Wilson (s/w Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Brandon Cameron (s/w Worker)
-            </span>
-        </div>
-
-        
 <div class="info-section">
-    <span class="label">Notes:</span>
-    <div class="notes-text">
-        My audios are not to be gifted or sold; feel free to trade but please credit me as the master.
+<span class="label">Notes:</span>
+<div class="notes-text">
+ Band: Laura Tipoki (Conductor / Keys / Accordion), Olie Powell (Bass), Griffin Youngs (Trombone / Glockenspiel), Shane Lestideau (Violin), Kieran Rafferty (Drums / Percussion), Lauren Jennings (Cello), Ash Griffin (Guitar)
+</div>
+</div>
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Australian Tour</span>
+<span class="separator">|</span> 
+<span>2025-07-13</span>
+<span class="separator">|</span> 
+<span>Wombatinee</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Noah Mullins (Orpheus), Eliza Soriano (u/s Eurydice), Elenoa Rokobaro (Persephone), Adrian Tamburini (Hades), Christine Anu (Hermes), Sarah Murr (Fate), Jennifer Trijo (Fate), Imani Williams (Fate), Romina Villafranca (Worker), Afua Adjei (Worker), Sam Richardson (Worker), Joe Gaudion (Worker), Devon Braithwaite (Worker)
+</span>
+</div>
+
+
+<div class="info-section">
+<span class="label">Notes:</span>
+<div class="notes-text">
+ Band: Laura Tipoki (Conductor / Keys / Accordion), Olie Powell (Bass), Griffin Youngs (Trombone / Glockenspiel), Shane Lestideau (Violin), Kieran Rafferty (Drums / Percussion), Lauren Jennings (Cello), Ash Griffin (Guitar)
+</div>
+</div>
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2025-09-02</span>
+<span class="separator">|</span> 
+<span>bobbyskazoo</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Shea Renne (Fate), Jessie Shelton (Fate), Kay Trinidad (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Alex Puette (Worker)
+</span>
+</div>
+
+
+<div class="info-section">
+<span class="label">Notes:</span>
+<div class="notes-text">
+ Band: Brian Drye (Trombone), Terrence Thornhill (Cello sub), Dana Lyn (Violin), Tony Mason (Drums sub), Chris Tordini (Bass), Ilusha Tsinadze (Guitar), Liam Robinson (Keys)
+</div>
+</div>
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2025-09-02</span>
+<span class="separator">|</span> 
+<span>aclaretonhand</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Shea Renne (Fate), Jessie Shelton (Fate), Kay Trinidad (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Alex Puette (Worker)
+</span>
+</div>
+
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2025-09-04</span>
+<span class="separator">|</span> 
+<span>rosescrescit</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes)
+</span>
+</div>
+
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2025-10-03</span>
+<span class="separator">|</span> 
+<span>Habs</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Eddie Noel Rodríguez (u/s Hermes), Marla Louissaint (Fate), Jessie Shelton (Fate), Kay Trinidad (Fate), Emily Afton (Worker), Tanner Ray Wilson (s/w Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Brandon Cameron (s/w Worker)
+</span>
+</div>
+
+
+<div class="info-section">
+<span class="label">Notes:</span>
+<div class="notes-text">
+ My audios are not to be gifted or sold; feel free to trade but please credit me as the master.
 
 Please do not repost my audios publicly on any platform.
-    </div>
+</div>
 </div>
 
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2025-10-07</span>
-        <span class="separator">|</span> 
-        <span>Habs</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2025-10-07</span>
+<span class="separator">|</span> 
+<span>Habs</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
 
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Jessie Shelton (Fate), Marla Louissaint (Fate), Kay Trinidad (Fate), Eddie Noel Rodríguez (s/w Worker), Ayla Ciccone-Burton (s/w Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Alex Puette (Worker)
-            </span>
-        </div>
-
-        
 <div class="info-section">
-    <span class="label">Notes:</span>
-    <div class="notes-text">
-        My audios are not to be gifted or sold; feel free to trade but please credit me as the master.
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Jessie Shelton (Fate), Marla Louissaint (Fate), Kay Trinidad (Fate), Eddie Noel Rodríguez (s/w Worker), Ayla Ciccone-Burton (s/w Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Alex Puette (Worker)
+</span>
+</div>
+
+
+<div class="info-section">
+<span class="label">Notes:</span>
+<div class="notes-text">
+ My audios are not to be gifted or sold; feel free to trade but please credit me as the master.
 
 Please do not repost my audios publicly on any platform.
-    </div>
+</div>
 </div>
 
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2025-10-12</span>
-        <span class="separator">|</span> 
-        <span>zuzu5678</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2025-10-12</span>
+<span class="separator">|</span> 
+<span>zuzu5678</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
 
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Jessie Shelton (Fate), Marla Louissaint (Fate), Kay Trinidad (Fate), Ayla Ciccone-Burton (s/w Worker), Jeffrey Cornelius (Worker), KC Dela Cruz (s/w Worker), Alex Lugo (s/w Worker), Tanner Ray Wilson (s/w Worker)
-            </span>
-        </div>
-
-        
 <div class="info-section">
-    <span class="label">Notes:</span>
-    <div class="notes-text">
-        Band: Brian Drye (Trombone), Buffi Jacobs (Cello sub), Alexandria Hill (Violin sub), Ben Perowsky (Drums), Chris Tordini (Bass), Ilusha Tsinadze (Guitar), Matt Podd (Keys sub)
-    </div>
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Jessie Shelton (Fate), Marla Louissaint (Fate), Kay Trinidad (Fate), Ayla Ciccone-Burton (s/w Worker), Jeffrey Cornelius (Worker), KC Dela Cruz (s/w Worker), Alex Lugo (s/w Worker), Tanner Ray Wilson (s/w Worker)
+</span>
 </div>
 
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2025-11-01</span>
-        <span class="separator">|</span> 
-        <span>Bandit</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
 
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Jessie Shelton (Fate), Kay Trinidad (Fate), Brit West (t/r Fate), Emily Afton (Worker), Tanner Ray Wilson (s/w Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Alex Puette (Worker)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2025-11-09</span>
-        <span class="separator">|</span> 
-        <span>bobbyskazoo</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Emily Afton (u/s Fate), Kay Trinidad (Fate), Brit West (t/r Fate), Brandon Cameron (s/w Worker), Jeffrey Cornelius (Worker), Alex Lugo (s/w Worker), Sydney Parra (Worker), Alex Puette (Worker)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2025-11-12</span>
-        <span class="separator">|</span> 
-        <span>bobbyskazoo</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Eddie Noel Rodríguez (u/s Hermes), Brit West (t/r Fate), Jessie Shelton (Fate), Sydney Parra (u/s Fate), Sojourner Brown (s/w Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), KC Dela Cruz (s/w Worker), Alex Puette (Worker)
-            </span>
-        </div>
-
-        
 <div class="info-section">
-    <span class="label">Notes:</span>
-    <div class="notes-text">
-        Sojourner covered Worker 1 and KC covered Worker 2.
-    </div>
+<span class="label">Notes:</span>
+<div class="notes-text">
+ Band: Brian Drye (Trombone), Buffi Jacobs (Cello sub), Alexandria Hill (Violin sub), Ben Perowsky (Drums), Chris Tordini (Bass), Ilusha Tsinadze (Guitar), Matt Podd (Keys sub)
+</div>
 </div>
 
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2025-11-12</span>
-        <span class="separator">|</span> 
-        <span>Habs</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2025-11-01</span>
+<span class="separator">|</span> 
+<span>Bandit</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
 
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Eddie Noel Rodríguez (u/s Hermes), Brit West (t/r Fate), Jessie Shelton (Fate), Kay Trinidad (Fate), Sojourner Brown (s/w Worker), Alex Puette (Worker), Sydney Parra (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker)
-            </span>
-        </div>
-
-        
 <div class="info-section">
-    <span class="label">Notes:</span>
-    <div class="notes-text">
-        My audios are not to be gifted or sold; feel free to trade but please credit me as the master.
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Jessie Shelton (Fate), Kay Trinidad (Fate), Brit West (t/r Fate), Emily Afton (Worker), Tanner Ray Wilson (s/w Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Alex Puette (Worker)
+</span>
+</div>
+
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2025-11-09</span>
+<span class="separator">|</span> 
+<span>bobbyskazoo</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Emily Afton (u/s Fate), Kay Trinidad (Fate), Brit West (t/r Fate), Brandon Cameron (s/w Worker), Jeffrey Cornelius (Worker), Alex Lugo (s/w Worker), Sydney Parra (Worker), Alex Puette (Worker)
+</span>
+</div>
+
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2025-11-12</span>
+<span class="separator">|</span> 
+<span>bobbyskazoo</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Eddie Noel Rodríguez (u/s Hermes), Brit West (t/r Fate), Jessie Shelton (Fate), Sydney Parra (u/s Fate), Sojourner Brown (s/w Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), KC Dela Cruz (s/w Worker), Alex Puette (Worker)
+</span>
+</div>
+
+
+<div class="info-section">
+<span class="label">Notes:</span>
+<div class="notes-text">
+ Sojourner covered Worker 1 and KC covered Worker 2.
+</div>
+</div>
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2025-11-12</span>
+<span class="separator">|</span> 
+<span>Habs</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Eddie Noel Rodríguez (u/s Hermes), Brit West (t/r Fate), Jessie Shelton (Fate), Kay Trinidad (Fate), Sojourner Brown (s/w Worker), Alex Puette (Worker), Sydney Parra (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker)
+</span>
+</div>
+
+
+<div class="info-section">
+<span class="label">Notes:</span>
+<div class="notes-text">
+ My audios are not to be gifted or sold; feel free to trade but please credit me as the master.
 
 Please do not repost my audios publicly on any platform.
-    </div>
+</div>
 </div>
 
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2025-11-13</span>
-        <span class="separator">|</span> 
-        <span>PTSnucka</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2025-11-13</span>
+<span class="separator">|</span> 
+<span>PTSnucka</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
 
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Malcolm Armwood (u/s Hermes), Brit West (t/r Fate), Jessie Shelton (Fate), Kay Trinidad (Fate), Sojourner Brown (s/w Worker), Alex Puette (Worker), Sydney Parra (Worker), Eddie Noel Rodríguez (Worker), Jeffrey Cornelius (Worker)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2025-11-15</span>
-        <span class="separator">|</span> 
-        <span>pancakehaus</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Malcolm Armwood (u/s Hermes), KC Dela Cruz (u/s Fate), Alex Lugo (u/s Fate), Brit West (t/r Fate), Sojourner Brown (s/w Worker), Brandon Cameron (s/w Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Alex Puette (Worker)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2025-11-15</span>
-        <span class="separator">|</span> 
-        <span>pancakehaus</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Malcolm Armwood (u/s Hermes), Jessie Shelton (Fate), Alex Lugo (u/s Fate), Brit West (t/r Fate), Sojourner Brown (s/w Worker), Brandon Cameron (s/w Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Alex Puette (Worker)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2025-11-18</span>
-        <span class="separator">|</span> 
-        <span>PTSnucka</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), KC Dela Cruz (u/s Fate), Jessie Shelton (Fate), Brit West (t/r Fate), Ayla Ciccone-Burton (s/w Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Alex Puette (Worker)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2025-12-09</span>
-        <span class="separator">|</span> 
-        <span>Habs</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Emily Afton (u/s Fate), Jessie Shelton (Fate), Kay Trinidad (Fate), Alex Lugo (s/w Worker), Sydney Parra (Worker), Jeffrey Cornelius (Worker), Alex Puette (Worker), Malcolm Armwood (Worker)
-            </span>
-        </div>
-
-        
 <div class="info-section">
-    <span class="label">Notes:</span>
-    <div class="notes-text">
-        Not to be shared publicly on any platform. Please credit Habs as master. 
-    </div>
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Malcolm Armwood (u/s Hermes), Brit West (t/r Fate), Jessie Shelton (Fate), Kay Trinidad (Fate), Sojourner Brown (s/w Worker), Alex Puette (Worker), Sydney Parra (Worker), Eddie Noel Rodríguez (Worker), Jeffrey Cornelius (Worker)
+</span>
 </div>
 
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2025-12-10</span>
-        <span class="separator">|</span> 
-        <span>bobbyskazoo</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
 
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Sydney Parra (u/s Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Emily Afton (u/s Fate), Jessie Shelton (Fate), Kay Trinidad (Fate), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), KC Dela Cruz (s/w Worker), Alex Lugo (s/w Worker), Alex Puette (Worker)
-            </span>
-        </div>
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2025-11-15</span>
+<span class="separator">|</span> 
+<span>pancakehaus</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
 
-        
 <div class="info-section">
-    <span class="label">Notes:</span>
-    <div class="notes-text">
-        Band: Emily “Freddie” Fredrickson (Trombone sub), Marika Hughes (Cello), Fung Chern Hwei (Violin sub), ? (Drums sub), Chris Tordini (Bass), Ilusha Tsinadze (Guitar), Nathan Koci (Keys sub)
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Malcolm Armwood (u/s Hermes), KC Dela Cruz (u/s Fate), Alex Lugo (u/s Fate), Brit West (t/r Fate), Sojourner Brown (s/w Worker), Brandon Cameron (s/w Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Alex Puette (Worker)
+</span>
+</div>
+
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2025-11-15</span>
+<span class="separator">|</span> 
+<span>pancakehaus</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Malcolm Armwood (u/s Hermes), Jessie Shelton (Fate), Alex Lugo (u/s Fate), Brit West (t/r Fate), Sojourner Brown (s/w Worker), Brandon Cameron (s/w Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Alex Puette (Worker)
+</span>
+</div>
+
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2025-11-18</span>
+<span class="separator">|</span> 
+<span>PTSnucka</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), KC Dela Cruz (u/s Fate), Jessie Shelton (Fate), Brit West (t/r Fate), Ayla Ciccone-Burton (s/w Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Alex Puette (Worker)
+</span>
+</div>
+
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2025-12-09</span>
+<span class="separator">|</span> 
+<span>Habs</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Emily Afton (u/s Fate), Jessie Shelton (Fate), Kay Trinidad (Fate), Alex Lugo (s/w Worker), Sydney Parra (Worker), Jeffrey Cornelius (Worker), Alex Puette (Worker), Malcolm Armwood (Worker)
+</span>
+</div>
+
+
+<div class="info-section">
+<span class="label">Notes:</span>
+<div class="notes-text">
+ Not to be shared publicly on any platform. Please credit Habs as master. 
+</div>
+</div>
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2025-12-10</span>
+<span class="separator">|</span> 
+<span>bobbyskazoo</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Sydney Parra (u/s Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Emily Afton (u/s Fate), Jessie Shelton (Fate), Kay Trinidad (Fate), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), KC Dela Cruz (s/w Worker), Alex Lugo (s/w Worker), Alex Puette (Worker)
+</span>
+</div>
+
+
+<div class="info-section">
+<span class="label">Notes:</span>
+<div class="notes-text">
+ Band: Emily “Freddie” Fredrickson (Trombone sub), Marika Hughes (Cello), Fung Chern Hwei (Violin sub), ? (Drums sub), Chris Tordini (Bass), Ilusha Tsinadze (Guitar), Nathan Koci (Keys sub)
 
 Alex covered Worker 1 and KC covered Worker 2.
-    </div>
+</div>
 </div>
 
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2025-12-14</span>
-        <span class="separator">|</span> 
-        <span>bobbyskazoo</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2025-12-14</span>
+<span class="separator">|</span> 
+<span>bobbyskazoo</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
 
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Alex Lugo (u/s Fate), Sydney Parra (u/s Fate), Kay Trinidad (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), KC Dela Cruz (s/w Worker), Tanner Ray Wilson (s/w Worker)
-            </span>
-        </div>
-
-        
 <div class="info-section">
-    <span class="label">Notes:</span>
-    <div class="notes-text">
-        Band: Brian Drye (Trombone), Marika Hughes (Cello), Dana Lyn (Violin), Ben Perowsky (Drums), Chris Tordini (Bass), Ilusha Tsinadze (Guitar), Cody Owen Stine (Keys sub)
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Rebecca Naomi Jones (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Alex Lugo (u/s Fate), Sydney Parra (u/s Fate), Kay Trinidad (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), KC Dela Cruz (s/w Worker), Tanner Ray Wilson (s/w Worker)
+</span>
+</div>
+
+
+<div class="info-section">
+<span class="label">Notes:</span>
+<div class="notes-text">
+ Band: Brian Drye (Trombone), Marika Hughes (Cello), Dana Lyn (Violin), Ben Perowsky (Drums), Chris Tordini (Bass), Ilusha Tsinadze (Guitar), Cody Owen Stine (Keys sub)
 
 KC covered Worker 2 and Tanner covered Worker 5. Sydney covered Fate 1 and Alex covered Fate 3.
-    </div>
+</div>
 </div>
 
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2025-12-17</span>
-        <span class="separator">|</span> 
-        <span>PTSnucka</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2025-12-17</span>
+<span class="separator">|</span> 
+<span>PTSnucka</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
 
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Alex Puette (u/s Hades), Kurt Elling (Hermes), Brit West (t/r Fate), Jessie Shelton (Fate), Kay Trinidad (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Tanner Ray Wilson (s/w Worker)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2025-12-30</span>
-        <span class="separator">|</span> 
-        <span>pancakehaus</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Sydney Parra (u/s Fate), Kay Trinidad (Fate), Brit West (t/r Fate), Alex Lugo (s/w Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Emily Afton (Worker), Tanner Ray Wilson (s/w Worker)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2026-01-01</span>
-        <span class="separator">|</span> 
-        <span>bobbyskazoo</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), KC Dela Cruz (u/s Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Jessie Shelton (Fate), Kay Trinidad (Fate), Brit West (t/r Fate), Emily Afton (Worker), Brandon Cameron (s/w Worker), Jeffrey Cornelius (Worker), Alex Lugo (s/w Worker), Sydney Parra (Worker)
-            </span>
-        </div>
-
-        
 <div class="info-section">
-    <span class="label">Notes:</span>
-    <div class="notes-text">
-        Band: Emily Freddie Fredrickson (Trombone sub), Buffi Jacobs (Cello sub), Fung Chern Hwei (Violin sub), Tony Mason (Drums sub), Carmen Quill (Bass sub), Max Talay (Guitar sub), Dionne Hendricks (Keys sub)
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Alex Puette (u/s Hades), Kurt Elling (Hermes), Brit West (t/r Fate), Jessie Shelton (Fate), Kay Trinidad (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Tanner Ray Wilson (s/w Worker)
+</span>
+</div>
+
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2025-12-30</span>
+<span class="separator">|</span> 
+<span>pancakehaus</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Sydney Parra (u/s Fate), Kay Trinidad (Fate), Brit West (t/r Fate), Alex Lugo (s/w Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Emily Afton (Worker), Tanner Ray Wilson (s/w Worker)
+</span>
+</div>
+
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2026-01-01</span>
+<span class="separator">|</span> 
+<span>bobbyskazoo</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), KC Dela Cruz (u/s Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Jessie Shelton (Fate), Kay Trinidad (Fate), Brit West (t/r Fate), Emily Afton (Worker), Brandon Cameron (s/w Worker), Jeffrey Cornelius (Worker), Alex Lugo (s/w Worker), Sydney Parra (Worker)
+</span>
+</div>
+
+
+<div class="info-section">
+<span class="label">Notes:</span>
+<div class="notes-text">
+ Band: Emily Freddie Fredrickson (Trombone sub), Buffi Jacobs (Cello sub), Fung Chern Hwei (Violin sub), Tony Mason (Drums sub), Carmen Quill (Bass sub), Max Talay (Guitar sub), Dionne Hendricks (Keys sub)
 
 Brandon covered Worker 4 and Alex covered Worker 5. 
-    </div>
+</div>
 </div>
 
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2026-01-02</span>
-        <span class="separator">|</span> 
-        <span>pancakehaus</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2026-01-02</span>
+<span class="separator">|</span> 
+<span>pancakehaus</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
 
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Jessie Shelton (Fate), Kay Trinidad (Fate), Brit West (t/r Fate), Sydney Parra (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Emily Afton (Worker), Brandon Cameron (s/w Worker)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2026-01-06</span>
-        <span class="separator">|</span> 
-        <span>Unknown</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Jessie Shelton (Fate), Kay Trinidad (Fate), Brit West (t/r Fate), Sydney Parra (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Emily Afton (Worker), Alex Puette (Worker)
-            </span>
-        </div>
-
-        
 <div class="info-section">
-    <span class="label">Notes:</span>
-    <div class="notes-text">
-        Trade only. Do NOT trade on social media (Twitter/TikTok/Reddit).
-    </div>
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Jessie Shelton (Fate), Kay Trinidad (Fate), Brit West (t/r Fate), Sydney Parra (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Emily Afton (Worker), Brandon Cameron (s/w Worker)
+</span>
 </div>
 
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2026-01-07</span>
-        <span class="separator">|</span> 
-        <span>thatbeautifulsound</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
 
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Jessie Shelton (Fate), Kay Trinidad (Fate), Brit West (t/r Fate), Sydney Parra (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Emily Afton (Worker), Alex Puette (Worker)
-            </span>
-        </div>
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2026-01-06</span>
+<span class="separator">|</span> 
+<span>Unknown</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
 
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2026-01-07</span>
-        <span class="separator">|</span> 
-        <span>Unknown</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2026-01-07</span>
-        <span class="separator">|</span> 
-        <span>Unknown</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2026-01-09</span>
-        <span class="separator">|</span> 
-        <span>Unknown</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2026-01-10</span>
-        <span class="separator">|</span> 
-        <span>zuzu5678</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Jessie Shelton (Fate), Kay Trinidad (Fate), Emily Afton (u/s Fate), Sydney Parra (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), KC Dela Cruz (s/w Worker), Alex Puette (Worker)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2026-01-10</span>
-        <span class="separator">|</span> 
-        <span>zuzu5678</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Jessie Shelton (Fate), Kay Trinidad (Fate), Emily Afton (u/s Fate), Sydney Parra (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), KC Dela Cruz (s/w Worker), Alex Puette (Worker)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2026-01-10</span>
-        <span class="separator">|</span> 
-        <span>Unknown</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Emily Afton (u/s Fate), Jessie Shelton (Fate), Kay Trinidad (Fate), KC Dela Cruz (s/w Worker), Sydney Parra (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Alex Puette (Worker)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2026-01-11</span>
-        <span class="separator">|</span> 
-        <span>zuzu5678</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Jessie Shelton (Fate), Kay Trinidad (Fate), Brit West (t/r Fate), Sydney Parra (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Emily Afton (Worker), Alex Puette (Worker)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2026-01-17</span>
-        <span class="separator">|</span> 
-        <span>pancakehaus</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Jessie Shelton (Fate), Kay Trinidad (Fate), Brit West (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Alex Puette (Worker)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2026-02-03</span>
-        <span class="separator">|</span> 
-        <span>Habs</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Max Kumangai (u/s Hermes), Kay Trinidad (Fate), Tara Jackson (u/s Fate), Shea Renne (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Brandon Cameron (s/w Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker)
-            </span>
-        </div>
-
-        
 <div class="info-section">
-    <span class="label">Notes:</span>
-    <div class="notes-text">
-        My audios are not to be gifted or sold; feel free to trade but please credit me as the master. Please do not repost my audios publicly on any platform.
-    </div>
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Jessie Shelton (Fate), Kay Trinidad (Fate), Brit West (t/r Fate), Sydney Parra (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Emily Afton (Worker), Alex Puette (Worker)
+</span>
 </div>
 
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2026-02-04</span>
-        <span class="separator">|</span> 
-        <span>bobbyskazoo</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
 
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Max Kumangai (u/s Hermes), KC Dela Cruz (u/s Fate), Shea Renne (t/r Fate), Kay Trinidad (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Brandon Cameron (s/w Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker)
-            </span>
-        </div>
-
-        
 <div class="info-section">
-    <span class="label">Notes:</span>
-    <div class="notes-text">
-        Band: Brian Drye (Trombone), Buffi Jacobs (Cello sub), Dana Lyn (Violin), Dan Rieser (Drums sub), Chris Tordini (Bass), Ilusha Tsinadze (Guitar), Dionne Hendricks (Keys sub)
+<span class="label">Notes:</span>
+<div class="notes-text">
+ Trade only. Do NOT trade on social media (Twitter/TikTok/Reddit).
+</div>
+</div>
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2026-01-07</span>
+<span class="separator">|</span> 
+<span>thatbeautifulsound</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Jessie Shelton (Fate), Kay Trinidad (Fate), Brit West (t/r Fate), Sydney Parra (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Emily Afton (Worker), Alex Puette (Worker)
+</span>
+</div>
+
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2026-01-07</span>
+<span class="separator">|</span> 
+<span>Unknown</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes)
+</span>
+</div>
+
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2026-01-07</span>
+<span class="separator">|</span> 
+<span>Unknown</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes)
+</span>
+</div>
+
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2026-01-09</span>
+<span class="separator">|</span> 
+<span>Unknown</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes)
+</span>
+</div>
+
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2026-01-10</span>
+<span class="separator">|</span> 
+<span>zuzu5678</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Jessie Shelton (Fate), Kay Trinidad (Fate), Emily Afton (u/s Fate), Sydney Parra (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), KC Dela Cruz (s/w Worker), Alex Puette (Worker)
+</span>
+</div>
+
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2026-01-10</span>
+<span class="separator">|</span> 
+<span>zuzu5678</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Jessie Shelton (Fate), Kay Trinidad (Fate), Emily Afton (u/s Fate), Sydney Parra (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), KC Dela Cruz (s/w Worker), Alex Puette (Worker)
+</span>
+</div>
+
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2026-01-10</span>
+<span class="separator">|</span> 
+<span>Unknown</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Emily Afton (u/s Fate), Jessie Shelton (Fate), Kay Trinidad (Fate), KC Dela Cruz (s/w Worker), Sydney Parra (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Alex Puette (Worker)
+</span>
+</div>
+
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2026-01-11</span>
+<span class="separator">|</span> 
+<span>zuzu5678</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Jessie Shelton (Fate), Kay Trinidad (Fate), Brit West (t/r Fate), Sydney Parra (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Emily Afton (Worker), Alex Puette (Worker)
+</span>
+</div>
+
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2026-01-17</span>
+<span class="separator">|</span> 
+<span>pancakehaus</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Jessie Shelton (Fate), Kay Trinidad (Fate), Brit West (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Alex Puette (Worker)
+</span>
+</div>
+
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2026-02-03</span>
+<span class="separator">|</span> 
+<span>Habs</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Max Kumangai (u/s Hermes), Kay Trinidad (Fate), Tara Jackson (u/s Fate), Shea Renne (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Brandon Cameron (s/w Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker)
+</span>
+</div>
+
+
+<div class="info-section">
+<span class="label">Notes:</span>
+<div class="notes-text">
+ My audios are not to be gifted or sold; feel free to trade but please credit me as the master. Please do not repost my audios publicly on any platform.
+</div>
+</div>
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2026-02-04</span>
+<span class="separator">|</span> 
+<span>bobbyskazoo</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Max Kumangai (u/s Hermes), KC Dela Cruz (u/s Fate), Shea Renne (t/r Fate), Kay Trinidad (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Brandon Cameron (s/w Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker)
+</span>
+</div>
+
+
+<div class="info-section">
+<span class="label">Notes:</span>
+<div class="notes-text">
+ Band: Brian Drye (Trombone), Buffi Jacobs (Cello sub), Dana Lyn (Violin), Dan Rieser (Drums sub), Chris Tordini (Bass), Ilusha Tsinadze (Guitar), Dionne Hendricks (Keys sub)
 
 KC covered Fate 1, Shea covered Fate 3, and Brandon covered Worker 5.
-    </div>
+</div>
 </div>
 
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2026-02-04</span>
-        <span class="separator">|</span> 
-        <span>DireSpider</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2026-02-04</span>
+<span class="separator">|</span> 
+<span>DireSpider</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
 
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Max Kumangai (u/s Hermes)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2026-02-19</span>
-        <span class="separator">|</span> 
-        <span>auspiciousavery</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Kay Trinidad (Fate), Jessie Shelton (Fate), Shea Renne (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Alex Puette (Worker)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2026-02-24</span>
-        <span class="separator">|</span> 
-        <span>DireSpider</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Kay Trinidad (Fate), Jessie Shelton (Fate), Shea Renne (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Alex Puette (Worker)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2026-02-24</span>
-        <span class="separator">|</span> 
-        <span>PTSnucka</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Kay Trinidad (Fate), Jessie Shelton (Fate), Shea Renne (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Alex Puette (Worker)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2026-02-26</span>
-        <span class="separator">|</span> 
-        <span>PTSnucka</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Kay Trinidad (Fate), Sydney Parra (u/s Fate), Shea Renne (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), KC Dela Cruz (s/w Worker), Alex Puette (Worker)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2026-02-28</span>
-        <span class="separator">|</span> 
-        <span>pancakehaus</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Kay Trinidad (Fate), KC Dela Cruz (u/s Fate), Shea Renne (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Alex Puette (Worker)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2026-03-01</span>
-        <span class="separator">|</span> 
-        <span>TheTiniestLifeboat</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Shea Renne (Fate), Jessie Shelton (Fate), Kay Trinidad (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Alex Puette (Worker)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2026-03-01</span>
-        <span class="separator">|</span> 
-        <span>bikinibottomday</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Shea Renne (Fate), Jessie Shelton (Fate), Kay Trinidad (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Alex Puette (Worker)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>Broadway</span>
-        <span class="separator">|</span> 
-        <span>2026-03-03</span>
-        <span class="separator">|</span> 
-        <span>PTSnucka</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Joshua Colley (Orpheus), Jordan Tyson (Eurydice), Gaby Moreno (Persephone), Gary Dourdan (Hades), J. Harrison Ghee (Hermes), Jessie Shelton (Fate), Kay Trinidad (Fate), Shea Renne (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), KC Dela Cruz (s/w Worker), Alex Puette (Worker)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>West End</span>
-        <span class="separator">|</span> 
-        <span>2024-02-15</span>
-        <span class="separator">|</span> 
-        <span>ghostlypawn</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Dónal Finn (Orpheus), Grace Hodgett-Young (Eurydice), Gloria Onitiri (Persephone), Zachary James (Hades), Melanie La Barrie (Hermes), Bella Brown (Fate), Madeline Charlemagne (Fate), Allie Daniel (Fate), Beth Hinton-Lever (Worker), Lauren Azania (Worker), Waylon Jacobs (Worker), Christopher Short (Worker), Tiago Dhondt Bamberger (Worker)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Hadestown</span>
-        <span class="separator">|</span> 
-        <span>West End</span>
-        <span class="separator">|</span> 
-        <span>2025-07-01</span>
-        <span class="separator">|</span> 
-        <span>CobCountyFan</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Sebastian Lim-Seet (u/s Orpheus), Desmonda Cathabel (Eurydice), Victoria Hamilton-Barritt (Persephone), Chris Jarman (Hades), Allie Daniel (u/s Hermes), Lauran Rae (Fate), Jasmine Triadi (u/s Fate), Lucinda Buckley (u/s Fate), Laura Delany (Worker), Michelle Andrews (Worker), Oisin Nolan-Power (Worker), Femi Akinfolarin (Worker), Ollie Bingham (Worker)
-            </span>
-        </div>
-
-        
 <div class="info-section">
-    <span class="label">Notes:</span>
-    <div class="notes-text">
-        Band: Tarek Merchant (Piano/Accordion), Ros Stephen (Violin), David Kadumukasa (Cello), David Delarre (Guitar), Daniel Higham (Trombone/Glockenspiel), Beth Symmons (Double Bass), Brad Webb (Drums/Percussion)
-    </div>
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Max Kumangai (u/s Hermes)
+</span>
 </div>
 
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Next to Normal</span>
-        <span class="separator">|</span> 
-        <span>West End</span>
-        <span class="separator">|</span> 
-        <span>2024-07-17</span>
-        <span class="separator">|</span> 
-        <span>bitchboi</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
 
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Caissie Levy (Diana), Jamie Parker (Dan), Jack Wolfe (Gabe), Eleanor Worthington-Cox (Natalie), Jack Ofrecio (Henry), Trevor Dion Nicholas (Dr. Fine), Trevor Dion Nicholas (Dr. Madden)
-            </span>
-        </div>
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2026-02-19</span>
+<span class="separator">|</span> 
+<span>auspiciousavery</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
 
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Paris: a Rock Odyssey</span>
-        <span class="separator">|</span> 
-        <span>Melbourne, Australia</span>
-        <span class="separator">|</span> 
-        <span>2017-07-15</span>
-        <span class="separator">|</span> 
-        <span>Diodenes Of Catania</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Ben Mingay (Achilles), Tim Freedman (Agamemnon), Cameron MacDonald (Ajax), Kerrie Anne Greenland (Cassandra), Scott Johnson (Hector), Madeleine Featherby (Helen), Mark Dickinson (Menelaus), Matthew Manahan (Paris), Tod Strike (Patroclus), John O'May (Priam), Brian Mannix (Sinon), John Waters (Ulysses)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Pinocchio (Dennis Kelly)</span>
-        <span class="separator">|</span> 
-        <span>National Theatre</span>
-        <span class="separator">|</span> 
-        <span>2017-12-01</span>
-        <span class="separator">|</span> 
-        <span>MrBraithwaite</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Joe Idris-Roberts (Pinocchio), Audrey Brisson (Jiminy Cricket), Annette McLaughlin (Blue Fairy), David Langham (Fox), David Kirkbride (Coachman), Dawn Sievewright (Lampy), Gershwyn Eustache Jnr (Stromboli), Jack Wolfe (Danny)
-            </span>
-        </div>
-
-        
 <div class="info-section">
-    <span class="label">Notes:</span>
-    <div class="notes-text">
-        First preview.
-    </div>
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Kay Trinidad (Fate), Jessie Shelton (Fate), Shea Renne (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Alex Puette (Worker)
+</span>
 </div>
 
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Spring Awakening (Sheik/Sater)</span>
-        <span class="separator">|</span> 
-        <span>West End 15th Anniversary Reunion Concert</span>
-        <span class="separator">|</span> 
-        <span>2024-06-02</span>
-        <span class="separator">|</span> 
-        <span>fridgesandfries</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
 
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jamie Muscato (Melchior Gabor), Charlotte Wakefield (Wendla Bergmann), Jack Wolfe (Moritz Stiefel), Lucy May Barker (Ilse Neumann), Hayley Gallivan (Martha Bessell), Richard Southgate (Hanschen Rilow), Edward Judge (Otto Lämmermeier), Jos Slovick (Georg Zirschnitz), Evelyn Hoskins (Thea), Natasha J. Barnes (Anna), Harry McEntire (Ernst Robel), Natalie Garner (The Adult Women), Mona Goodwin (The Adult Women), Gemma O'Duffy (The Adult Women), Chris Barton (The Adult Men)
-            </span>
-        </div>
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2026-02-24</span>
+<span class="separator">|</span> 
+<span>DireSpider</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
 
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Sweeney Todd: The Demon Barber of Fleet Street</span>
-        <span class="separator">|</span> 
-        <span>Belfast</span>
-        <span class="separator">|</span> 
-        <span>2019-02-02</span>
-        <span class="separator">|</span> 
-        <span>IrishTrading</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Steven Page (Sweeney Todd), Julie Mullins (Mrs. Lovett), John Porter (Anthony Hope), Jessica Hackett (Johanna), Mark O'Regan (Judge Turpin), Jack Wolfe (Tobias Ragg), Richard Croxford (Beadle Bamford), Elaine Hearty (Beggar Woman), Matthew Cavan (Adolfo Pirelli), Enda Kilroy (Jonas Fogg), Jolene O'Hara (Ensemble), Dawn Burns (Ensemble), Tommy Wallace (Ensemble), Christopher Cull (Ensemble), Enda Kilroy (Ensemble)
-            </span>
-        </div>
-
-        
 <div class="info-section">
-    <span class="label">Notes:</span>
-    <div class="notes-text">
-        Staged at the Lyric Theatre. Co-Production with Northern Ireland Opera.
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Kay Trinidad (Fate), Jessie Shelton (Fate), Shea Renne (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Alex Puette (Worker)
+</span>
+</div>
+
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2026-02-24</span>
+<span class="separator">|</span> 
+<span>PTSnucka</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Kay Trinidad (Fate), Jessie Shelton (Fate), Shea Renne (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Alex Puette (Worker)
+</span>
+</div>
+
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2026-02-26</span>
+<span class="separator">|</span> 
+<span>PTSnucka</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Kay Trinidad (Fate), Sydney Parra (u/s Fate), Shea Renne (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), KC Dela Cruz (s/w Worker), Alex Puette (Worker)
+</span>
+</div>
+
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2026-02-28</span>
+<span class="separator">|</span> 
+<span>pancakehaus</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Kay Trinidad (Fate), KC Dela Cruz (u/s Fate), Shea Renne (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Alex Puette (Worker)
+</span>
+</div>
+
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2026-03-01</span>
+<span class="separator">|</span> 
+<span>TheTiniestLifeboat</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Shea Renne (Fate), Jessie Shelton (Fate), Kay Trinidad (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Alex Puette (Worker)
+</span>
+</div>
+
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2026-03-01</span>
+<span class="separator">|</span> 
+<span>bikinibottomday</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Orpheus), Morgan Dudley (Eurydice), Allison Russell (Persephone), Paulo Szot (Hades), Kurt Elling (Hermes), Shea Renne (Fate), Jessie Shelton (Fate), Kay Trinidad (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), Sydney Parra (Worker), Alex Puette (Worker)
+</span>
+</div>
+
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>Broadway</span>
+<span class="separator">|</span> 
+<span>2026-03-03</span>
+<span class="separator">|</span> 
+<span>PTSnucka</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Joshua Colley (Orpheus), Jordan Tyson (Eurydice), Gaby Moreno (Persephone), Gary Dourdan (Hades), J. Harrison Ghee (Hermes), Jessie Shelton (Fate), Kay Trinidad (Fate), Shea Renne (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Jeffrey Cornelius (Worker), KC Dela Cruz (s/w Worker), Alex Puette (Worker)
+</span>
+</div>
+
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>West End</span>
+<span class="separator">|</span> 
+<span>2024-02-15</span>
+<span class="separator">|</span> 
+<span>ghostlypawn</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Dónal Finn (Orpheus), Grace Hodgett-Young (Eurydice), Gloria Onitiri (Persephone), Zachary James (Hades), Melanie La Barrie (Hermes), Bella Brown (Fate), Madeline Charlemagne (Fate), Allie Daniel (Fate), Beth Hinton-Lever (Worker), Lauren Azania (Worker), Waylon Jacobs (Worker), Christopher Short (Worker), Tiago Dhondt Bamberger (Worker)
+</span>
+</div>
+
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Hadestown</span>
+<span class="separator">|</span> 
+<span>West End</span>
+<span class="separator">|</span> 
+<span>2025-07-01</span>
+<span class="separator">|</span> 
+<span>CobCountyFan</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Sebastian Lim-Seet (u/s Orpheus), Desmonda Cathabel (Eurydice), Victoria Hamilton-Barritt (Persephone), Chris Jarman (Hades), Allie Daniel (u/s Hermes), Lauran Rae (Fate), Jasmine Triadi (u/s Fate), Lucinda Buckley (u/s Fate), Laura Delany (Worker), Michelle Andrews (Worker), Oisin Nolan-Power (Worker), Femi Akinfolarin (Worker), Ollie Bingham (Worker)
+</span>
+</div>
+
+
+<div class="info-section">
+<span class="label">Notes:</span>
+<div class="notes-text">
+ Band: Tarek Merchant (Piano/Accordion), Ros Stephen (Violin), David Kadumukasa (Cello), David Delarre (Guitar), Daniel Higham (Trombone/Glockenspiel), Beth Symmons (Double Bass), Brad Webb (Drums/Percussion)
+</div>
+</div>
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Next to Normal</span>
+<span class="separator">|</span> 
+<span>West End</span>
+<span class="separator">|</span> 
+<span>2024-07-17</span>
+<span class="separator">|</span> 
+<span>bitchboi</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Caissie Levy (Diana), Jamie Parker (Dan), Jack Wolfe (Gabe), Eleanor Worthington-Cox (Natalie), Jack Ofrecio (Henry), Trevor Dion Nicholas (Dr. Fine), Trevor Dion Nicholas (Dr. Madden)
+</span>
+</div>
+
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Paris: a Rock Odyssey</span>
+<span class="separator">|</span> 
+<span>Melbourne, Australia</span>
+<span class="separator">|</span> 
+<span>2017-07-15</span>
+<span class="separator">|</span> 
+<span>Diodenes Of Catania</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Ben Mingay (Achilles), Tim Freedman (Agamemnon), Cameron MacDonald (Ajax), Kerrie Anne Greenland (Cassandra), Scott Johnson (Hector), Madeleine Featherby (Helen), Mark Dickinson (Menelaus), Matthew Manahan (Paris), Tod Strike (Patroclus), John O'May (Priam), Brian Mannix (Sinon), John Waters (Ulysses)
+</span>
+</div>
+
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Pinocchio (Dennis Kelly)</span>
+<span class="separator">|</span> 
+<span>National Theatre</span>
+<span class="separator">|</span> 
+<span>2017-12-01</span>
+<span class="separator">|</span> 
+<span>MrBraithwaite</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Joe Idris-Roberts (Pinocchio), Audrey Brisson (Jiminy Cricket), Annette McLaughlin (Blue Fairy), David Langham (Fox), David Kirkbride (Coachman), Dawn Sievewright (Lampy), Gershwyn Eustache Jnr (Stromboli), Jack Wolfe (Danny)
+</span>
+</div>
+
+
+<div class="info-section">
+<span class="label">Notes:</span>
+<div class="notes-text">
+ First preview.
+</div>
+</div>
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Spring Awakening (Sheik/Sater)</span>
+<span class="separator">|</span> 
+<span>West End 15th Anniversary Reunion Concert</span>
+<span class="separator">|</span> 
+<span>2024-06-02</span>
+<span class="separator">|</span> 
+<span>fridgesandfries</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jamie Muscato (Melchior Gabor), Charlotte Wakefield (Wendla Bergmann), Jack Wolfe (Moritz Stiefel), Lucy May Barker (Ilse Neumann), Hayley Gallivan (Martha Bessell), Richard Southgate (Hanschen Rilow), Edward Judge (Otto Lämmermeier), Jos Slovick (Georg Zirschnitz), Evelyn Hoskins (Thea), Natasha J. Barnes (Anna), Harry McEntire (Ernst Robel), Natalie Garner (The Adult Women), Mona Goodwin (The Adult Women), Gemma O'Duffy (The Adult Women), Chris Barton (The Adult Men)
+</span>
+</div>
+
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Sweeney Todd: The Demon Barber of Fleet Street</span>
+<span class="separator">|</span> 
+<span>Belfast</span>
+<span class="separator">|</span> 
+<span>2019-02-02</span>
+<span class="separator">|</span> 
+<span>IrishTrading</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Steven Page (Sweeney Todd), Julie Mullins (Mrs. Lovett), John Porter (Anthony Hope), Jessica Hackett (Johanna), Mark O'Regan (Judge Turpin), Jack Wolfe (Tobias Ragg), Richard Croxford (Beadle Bamford), Elaine Hearty (Beggar Woman), Matthew Cavan (Adolfo Pirelli), Enda Kilroy (Jonas Fogg), Jolene O'Hara (Ensemble), Dawn Burns (Ensemble), Tommy Wallace (Ensemble), Christopher Cull (Ensemble), Enda Kilroy (Ensemble)
+</span>
+</div>
+
+
+<div class="info-section">
+<span class="label">Notes:</span>
+<div class="notes-text">
+ Staged at the Lyric Theatre. Co-Production with Northern Ireland Opera.
 A central set piece breaks approx. 20 minutes into Act 1 and there is a show stop just before Green Finch & Linnet Bird begins. Multiple versions are circulating, including untracked MP3s (with and without album art) and tracked MP3s.
-    </div>
+</div>
 </div>
 
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>The Braille Legacy</span>
-        <span class="separator">|</span> 
-        <span>Off-West End</span>
-        <span class="separator">|</span> 
-        <span>2017-05-24</span>
-        <span class="separator">|</span> 
-        <span>Musicaltheatrelive</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>The Braille Legacy</span>
+<span class="separator">|</span> 
+<span>Off-West End</span>
+<span class="separator">|</span> 
+<span>2017-05-24</span>
+<span class="separator">|</span> 
+<span>Musicaltheatrelive</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
 
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Jack Wolfe (Louis Braille), Ashley Stillburn (Monsieur Dufau), Jason Broderick (Gabriel), Taite-Elliot Drew (Parisian Gentleman), Will Haswell (Doctor Berger), Lottie Henshall (Rose Barbier de la Serre), Sarah-Marie Maxwell (Parisian Lady), Matthew McDonald (President of the Assembly), Kate Milner Evans (Mme. Marie Barbier de la Serre), Janet Mooney (Mme. Deschamps), Ceili O'Connor (Madame Demeziere), Michael Remick (Captain Charles Barbier de la Serre)
-            </span>
-        </div>
-
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>The Magician's Elephant</span>
-        <span class="separator">|</span> 
-        <span>Royal Shakespeare Company</span>
-        <span class="separator">|</span> 
-        <span>2021-11-17</span>
-        <span class="separator">|</span> 
-        <span>Unknown</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
-
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Suzanne Nixon (The Elephant), Rianna Ash (s/w The Elephant), Zoe Halliday (The Elephant), Forbes Masson (Police Chief), Lauren Jones (Police Officer), Sharif Afifi (Police Officer), Hannah Brown (s/w Baker), Wendy Somerville (Mrs. Griswald), Matt Bateman (s/w Doctor), Mandi Symonds (Sister Marie), Chrystine Symone (Lamplighter), Chrystine Symone (Young Police Officer), Lauren Jones (Lisette), Sharif Afifi (Milliner), Sharif Afifi (Dance Teacher), Amy Booth-Steel (The Narrator), Rianna Ash (s/w Peter's Mother), Alastair Parker (Magician), Renu Arora (Madame LaVaughn), Sam Harrison (Count Quintet), Alison Arnopp (u/s Countess Quintet), Melissa James (Gloria Matienne), Marc Antolin (Leo Matienne), Miriam Nyarko (Adele), Stephen John Davis (u/s Vilna Lutz), Jack Wolfe (Peter Duchene), Lucca Chadwick-Patel (Fishmonger), Michael Carolan (Peter's Father)
-            </span>
-        </div>
-
-        
 <div class="info-section">
-    <span class="label">Notes:</span>
-    <div class="notes-text">
-        Kind of an old-school operatic vibe as far as the music/songs go. No song list in the programme unfortunately. Jack Wolfe has an incredible vocal range!
-    </div>
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Jack Wolfe (Louis Braille), Ashley Stillburn (Monsieur Dufau), Jason Broderick (Gabriel), Taite-Elliot Drew (Parisian Gentleman), Will Haswell (Doctor Berger), Lottie Henshall (Rose Barbier de la Serre), Sarah-Marie Maxwell (Parisian Lady), Matthew McDonald (President of the Assembly), Kate Milner Evans (Mme. Marie Barbier de la Serre), Janet Mooney (Mme. Deschamps), Ceili O'Connor (Madame Demeziere), Michael Remick (Captain Charles Barbier de la Serre)
+</span>
 </div>
 
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>The Unlikely Pilgrimage of Harold Fry</span>
-        <span class="separator">|</span> 
-        <span>Chichester Festival Theatre</span>
-        <span class="separator">|</span> 
-        <span>2025-05-05</span>
-        <span class="separator">|</span> 
-        <span>Unknown</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
 
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Mark Addy (Harold Fry), Jenna Russell (Maureen Fry), Jack Wolfe (The Balladeer), Tarinn Callender (Wilf), Sharon Rose (Garage Girl), Sharon Rose (Kate), Amy Booth-Steel (Queenie Hennessy), Amy Booth-Steel (Farmer's Wife), Madeleine Worrall (Sister Philomena), Madeleine Worrall (Martina), Don Gallagher (Silver-Haired Gentleman), Don Gallagher (Mr Napier), Timo Tatzber (Dog), Ben Redfern (Rich), Ralph Birtwell (Rex), Ralph Birtwell (Ensemble), Timo Tatzber (Ensemble), Ben Redfern (Ensemble), Jacqueline Hughes (Ensemble), Nell Martin (Ensemble), Anu Ogunmefun (Ensemble)
-            </span>
-        </div>
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>The Magician's Elephant</span>
+<span class="separator">|</span> 
+<span>Royal Shakespeare Company</span>
+<span class="separator">|</span> 
+<span>2021-11-17</span>
+<span class="separator">|</span> 
+<span>Unknown</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
 
-        
 <div class="info-section">
-    <span class="label">Notes:</span>
-    <div class="notes-text">
-        Originally released as untracked audio but frequently traded with tracked songs included.
-    </div>
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Suzanne Nixon (The Elephant), Rianna Ash (s/w The Elephant), Zoe Halliday (The Elephant), Forbes Masson (Police Chief), Lauren Jones (Police Officer), Sharif Afifi (Police Officer), Hannah Brown (s/w Baker), Wendy Somerville (Mrs. Griswald), Matt Bateman (s/w Doctor), Mandi Symonds (Sister Marie), Chrystine Symone (Lamplighter), Chrystine Symone (Young Police Officer), Lauren Jones (Lisette), Sharif Afifi (Milliner), Sharif Afifi (Dance Teacher), Amy Booth-Steel (The Narrator), Rianna Ash (s/w Peter's Mother), Alastair Parker (Magician), Renu Arora (Madame LaVaughn), Sam Harrison (Count Quintet), Alison Arnopp (u/s Countess Quintet), Melissa James (Gloria Matienne), Marc Antolin (Leo Matienne), Miriam Nyarko (Adele), Stephen John Davis (u/s Vilna Lutz), Jack Wolfe (Peter Duchene), Lucca Chadwick-Patel (Fishmonger), Michael Carolan (Peter's Father)
+</span>
 </div>
 
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>The Unlikely Pilgrimage of Harold Fry</span>
-        <span class="separator">|</span> 
-        <span>West End</span>
-        <span class="separator">|</span> 
-        <span>2026-01-29</span>
-        <span class="separator">|</span> 
-        <span>SvetlanaVassy</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
 
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Mark Addy (Harold Fry), Jenna Russell (Maureen Fry), Noah Mullins (The Balladeer), Ashley Samuels (Wilf), Nicole Nyarambi (Garage Girl), Gleanne Purcell-Brown (Kate), Maggie Service (Queenie Hennessy), Jenna Boyd (Farmer's Wife), Jenna Boyd (Sister Philomena), Madeleine Worrall (Martina), Daniel Crossley (Silver-Haired Gentleman), Daniel Crossley (Mr Napier), Timo Tatzber (Dog), Craig Armstrong (Rich), Peter Polycarpou (Rex), Jenna Boyd (Rita), Gleanne Purcell-Brown (Betsy), Ashley Samuels (Jim), Maggie Service (Fairy Assistant), Maggie Service (Gorilla), Nell Martin (Young Maureen), Timo Tatzber (Young Harold), Madeleine Worrall (Locum), Nell Martin (Kind Customer), Nell Martin (Deliveroo), Edwin Ray (Ensemble), Nell Martin (Ensemble), Ediz Mahmut (Ensemble), Olivia Foster Browne (Ensemble), Gemma Atkins (Ensemble), Madeleine Worrall (Ensemble), Jenna Boyd (Ensemble), Timo Tatzber (Ensemble), Daniel Crossley (Ensemble), Maggie Service (Ensemble), Ashley Samuels (Ensemble), Gleanne Purcell-Brown (Ensemble), Craig Armstrong (Ensemble), Peter Polycarpou (Ensemble), Nicole Nyarambi (Ensemble)
-            </span>
-        </div>
-
-        
 <div class="info-section">
-    <span class="label">Notes:</span>
-    <div class="notes-text">
-        All trades through the master.
-    </div>
+<span class="label">Notes:</span>
+<div class="notes-text">
+ Kind of an old-school operatic vibe as far as the music/songs go. No song list in the programme unfortunately. Jack Wolfe has an incredible vocal range!
+</div>
 </div>
 
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>The Unlikely Pilgrimage of Harold Fry</span>
-        <span class="separator">|</span> 
-        <span>West End</span>
-        <span class="separator">|</span> 
-        <span>2026-02-19</span>
-        <span class="separator">|</span> 
-        <span>bobbyskazoo</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>The Unlikely Pilgrimage of Harold Fry</span>
+<span class="separator">|</span> 
+<span>Chichester Festival Theatre</span>
+<span class="separator">|</span> 
+<span>2025-05-05</span>
+<span class="separator">|</span> 
+<span>Unknown</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
 
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Mark Addy (Harold Fry), Jenna Russell (Maureen Fry), Noah Mullins (The Balladeer), Ediz Mahmut (u/s Wilf), Nicole Nyarambi (Garage Girl), Gleanne Purcell-Brown (Kate), Maggie Service (Queenie Hennessy), Jenna Boyd (Farmer's Wife), Jenna Boyd (Sister Philomena), Madeleine Worrall (Martina), Daniel Crossley (Silver-Haired Gentleman), Daniel Crossley (Mr Napier), Timo Tatzber (Dog), Craig Armstrong (Rich), Peter Polycarpou (Rex), Jenna Boyd (Rita), Gleanne Purcell-Brown (Betsy), Ediz Mahmut (u/s Jim), Maggie Service (Fairy Assistant), Maggie Service (Gorilla), Nell Martin (Young Maureen), Timo Tatzber (Young Harold), Madeleine Worrall (Locum), Nell Martin (Kind Customer), Nell Martin (Deliveroo), Gemma Atkins (Ensemble), Nell Martin (Ensemble), Olivia Foster Browne (Ensemble), Gleanne Purcell-Brown (Ensemble), Peter Polycarpou (Ensemble), Edwin Ray (Ensemble), Craig Armstrong (Ensemble), Timo Tatzber (Ensemble), Daniel Crossley (Ensemble), Madeleine Worrall (Ensemble), Jenna Boyd (Ensemble), Ediz Mahmut (Ensemble), Nicole Nyarambi (Ensemble), Maggie Service (Ensemble)
-            </span>
-        </div>
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Mark Addy (Harold Fry), Jenna Russell (Maureen Fry), Jack Wolfe (The Balladeer), Tarinn Callender (Wilf), Sharon Rose (Garage Girl), Sharon Rose (Kate), Amy Booth-Steel (Queenie Hennessy), Amy Booth-Steel (Farmer's Wife), Madeleine Worrall (Sister Philomena), Madeleine Worrall (Martina), Don Gallagher (Silver-Haired Gentleman), Don Gallagher (Mr Napier), Timo Tatzber (Dog), Ben Redfern (Rich), Ralph Birtwell (Rex), Ralph Birtwell (Ensemble), Timo Tatzber (Ensemble), Ben Redfern (Ensemble), Jacqueline Hughes (Ensemble), Nell Martin (Ensemble), Anu Ogunmefun (Ensemble)
+</span>
+</div>
 
-        
-    </div>,    <div class="recording-card">
-        <h2 class="header">
-            <span>Theatrical Consequences</span>
-        <span class="separator">|</span> 
-        <span>London</span>
-        <span class="separator">|</span> 
-        <span>2023-05-15</span>
-        <span class="separator">|</span> 
-        <span>badwolf1341</span>
-        <span class="separator">|</span> 
-        <span class="capitalize-text">audio</span>
-        </h2>
 
-        <div class="info-section">
-            <span class="label">Cast:</span>
-            <span id="cast-display" class="content-text">
-                Bessie Carter (Performer), David Mumeni (Performer), Denise Gough (Performer), Freddie Fox (Performer), Jack Wolfe (Performer), Jade Anouka (Performer), Kerry Godliman (Performer), Manjinder Virk (Performer), Pippa Bennett-Warner (Performer), Sacha Dhawan (Performer), Sam Phillips (Performer), Robert Bathurst (Performer), Tracy-Ann Oberman (Performer)
-            </span>
-        </div>
+<div class="info-section">
+<span class="label">Notes:</span>
+<div class="notes-text">
+ Originally released as untracked audio but frequently traded with tracked songs included.
+</div>
+</div>
 
-        
-    </div>    
-</body> 
-</html>
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>The Unlikely Pilgrimage of Harold Fry</span>
+<span class="separator">|</span> 
+<span>West End</span>
+<span class="separator">|</span> 
+<span>2026-01-29</span>
+<span class="separator">|</span> 
+<span>SvetlanaVassy</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Mark Addy (Harold Fry), Jenna Russell (Maureen Fry), Noah Mullins (The Balladeer), Ashley Samuels (Wilf), Nicole Nyarambi (Garage Girl), Gleanne Purcell-Brown (Kate), Maggie Service (Queenie Hennessy), Jenna Boyd (Farmer's Wife), Jenna Boyd (Sister Philomena), Madeleine Worrall (Martina), Daniel Crossley (Silver-Haired Gentleman), Daniel Crossley (Mr Napier), Timo Tatzber (Dog), Craig Armstrong (Rich), Peter Polycarpou (Rex), Jenna Boyd (Rita), Gleanne Purcell-Brown (Betsy), Ashley Samuels (Jim), Maggie Service (Fairy Assistant), Maggie Service (Gorilla), Nell Martin (Young Maureen), Timo Tatzber (Young Harold), Madeleine Worrall (Locum), Nell Martin (Kind Customer), Nell Martin (Deliveroo), Edwin Ray (Ensemble), Nell Martin (Ensemble), Ediz Mahmut (Ensemble), Olivia Foster Browne (Ensemble), Gemma Atkins (Ensemble), Madeleine Worrall (Ensemble), Jenna Boyd (Ensemble), Timo Tatzber (Ensemble), Daniel Crossley (Ensemble), Maggie Service (Ensemble), Ashley Samuels (Ensemble), Gleanne Purcell-Brown (Ensemble), Craig Armstrong (Ensemble), Peter Polycarpou (Ensemble), Nicole Nyarambi (Ensemble)
+</span>
+</div>
+
+
+<div class="info-section">
+<span class="label">Notes:</span>
+<div class="notes-text">
+ All trades through the master.
+</div>
+</div>
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>The Unlikely Pilgrimage of Harold Fry</span>
+<span class="separator">|</span> 
+<span>West End</span>
+<span class="separator">|</span> 
+<span>2026-02-19</span>
+<span class="separator">|</span> 
+<span>bobbyskazoo</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Mark Addy (Harold Fry), Jenna Russell (Maureen Fry), Noah Mullins (The Balladeer), Ediz Mahmut (u/s Wilf), Nicole Nyarambi (Garage Girl), Gleanne Purcell-Brown (Kate), Maggie Service (Queenie Hennessy), Jenna Boyd (Farmer's Wife), Jenna Boyd (Sister Philomena), Madeleine Worrall (Martina), Daniel Crossley (Silver-Haired Gentleman), Daniel Crossley (Mr Napier), Timo Tatzber (Dog), Craig Armstrong (Rich), Peter Polycarpou (Rex), Jenna Boyd (Rita), Gleanne Purcell-Brown (Betsy), Ediz Mahmut (u/s Jim), Maggie Service (Fairy Assistant), Maggie Service (Gorilla), Nell Martin (Young Maureen), Timo Tatzber (Young Harold), Madeleine Worrall (Locum), Nell Martin (Kind Customer), Nell Martin (Deliveroo), Gemma Atkins (Ensemble), Nell Martin (Ensemble), Olivia Foster Browne (Ensemble), Gleanne Purcell-Brown (Ensemble), Peter Polycarpou (Ensemble), Edwin Ray (Ensemble), Craig Armstrong (Ensemble), Timo Tatzber (Ensemble), Daniel Crossley (Ensemble), Madeleine Worrall (Ensemble), Jenna Boyd (Ensemble), Ediz Mahmut (Ensemble), Nicole Nyarambi (Ensemble), Maggie Service (Ensemble)
+</span>
+</div>
+
+
+</div>,<div class="recording-card">
+<h2 class="header">
+<span>Theatrical Consequences</span>
+<span class="separator">|</span> 
+<span>London</span>
+<span class="separator">|</span> 
+<span>2023-05-15</span>
+<span class="separator">|</span> 
+<span>badwolf1341</span>
+<span class="separator">|</span> 
+<span class="capitalize-text">audio</span>
+</h2>
+
+<div class="info-section">
+<span class="label">Cast:</span>
+<span id="cast-display" class="content-text">
+Bessie Carter (Performer), David Mumeni (Performer), Denise Gough (Performer), Freddie Fox (Performer), Jack Wolfe (Performer), Jade Anouka (Performer), Kerry Godliman (Performer), Manjinder Virk (Performer), Pippa Bennett-Warner (Performer), Sacha Dhawan (Performer), Sam Phillips (Performer), Robert Bathurst (Performer), Tracy-Ann Oberman (Performer)
+</span>
+</div>
+
+
+</div>
