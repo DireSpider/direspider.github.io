@@ -64,6 +64,17 @@ body { font-family: sans-serif; line-height: 1.6; margin: 0; color: #333; }
     letter-spacing: 0.5px;
 }
 
+.recording-card .nft-badge {
+    text-transform: uppercase;
+    background: #d32f2f; /* A standard, professional red */
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    margin-left: auto; 
+    letter-spacing: 0.5px;
+}
+
 /* Information Sections (Cast, Notes, etc.) */
 .info-section {
     display: flex;
