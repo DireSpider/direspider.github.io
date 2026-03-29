@@ -1,0 +1,1370 @@
+<!DOCTYPE html> 
+<html> 
+<head>     
+<style>
+
+    .uppercase-text {
+      text-transform: uppercase;
+    }
+    .capitalize-text {
+      text-transform: capitalize;
+    }
+
+    /* Modern Reset & Base Styles */
+    body {
+        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        background-color: #0f172a; /* Deep slate background */
+        color: #e2e8f0;
+        line-height: 1.6;
+        padding: 40px 20px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* The Card Container */
+    .recording-card {
+        background: #1e293b;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        padding: 24px;
+        margin-bottom: 30px;
+        max-width: 800px;
+        width: 100%;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Subtle colorful accent bar on the left */
+    .recording-card::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 6px;
+        background: linear-gradient(to bottom, #818cf8, #c084fc);
+    }
+
+    .recording-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Header Styling */
+    .header {
+        font-size: 1.4rem;
+        margin-top: 0;
+        margin-bottom: 18px;
+        color: #f8fafc;
+        font-weight: 700;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+    }
+
+    /* Separators */
+    .separator {
+        color: #64748b;
+        font-weight: 300;
+        padding: 0 4px;
+        font-size: 1.1rem;
+    }
+
+    /* Info Sections (Cast & Notes) */
+    .info-section {
+        margin-bottom: 16px;
+        background: rgba(255, 255, 255, 0.03);
+        padding: 12px 16px;
+        border-radius: 8px;
+    }
+
+    .info-section:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Labels */
+    .label {
+        display: block;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 0.05em;
+        color: #818cf8; /* Bright indigo accent */
+        margin-bottom: 4px;
+    }
+
+    /* Content Text */
+    .content-text, .notes-text {
+        font-size: 0.95rem;
+        color: #cbd5e1;
+    }
+
+    /* Specific styling for the cast list */
+    #cast-display {
+        display: inline-block;
+    }
+
+    /* Notes section styling */
+    .notes-text {
+        white-space: pre-line; /* Preserves line breaks in your notes */
+        font-style: italic;
+        border-left: 2px solid #475569;
+        padding-left: 12px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+        .header {
+            font-size: 1.1rem;
+        }
+        .recording-card {
+            padding: 16px;
+        }
+    }
+</style>
+</head> 
+<body>     <div class="recording-card">
+        <h2 class="header">
+            <span>& Juliet</span>
+        <span class="separator">|</span> 
+        <span>Broadway</span>
+        <span class="separator">|</span> 
+        <span>2022-12-23</span>
+        <span class="separator">|</span> 
+        <span>bikinibottomday</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Lorna Courtney (Juliet), Tiernan Tunnicliffe (u/s Anne Hathaway), Stark Sands (William Shakespeare), Ben Jackson Walker (Romeo), Philippe Arroyo (Francois), Justin David Sullivan (May), Melanie La Barrie (Nurse "Angelique"), Paulo Szot (Lance), Veronica Otim (Lady Capulet), Nicholas Edwards (Lord Capulet), Alaina Vi Maderal (s/w Benvolio), Virgil Gadson (Augustine), Matt Raffy (Gregory), Alaina Vi Maderal (s/w Gwynne), Joe Moeller (Henry), Jasmine Rafael (Imogen), Rachel Webb (Judith), Joomin Hwang (Kempe), Megan Kane (Lucy), Veronica Otim (Nell), Brandon Antonio (Richard), Bobby "Pocket" Horner (Rumour), Nicholas Edwards (Sly)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        Excellent 4K capture of the exact same cast as the day before, but this time with the knock knock joke. Act One has a head obstruction on the left that is almost entirely worked around, and Act Two has a very minor bar obstruction that doesn’t block anything. Includes curtain call, audio is fed from external source.
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>1984 (Icke)</span>
+        <span class="separator">|</span> 
+        <span>Broadway</span>
+        <span class="separator">|</span> 
+        <span>2017-07-01</span>
+        <span class="separator">|</span> 
+        <span>SunsetBlvd79</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Reed Birney (O'Brien), Michael Potts (Charrington), Olivia Wilde (Julia), Wayne Duvall (Parsons), Tom Sturridge (Winston), Nick Mills (Syme), Cara Seymour (Mrs. Parsons), Carl Hendrick Louis (Martin), Max Baker (Emmanuel Goldstein), Richard Gallagher (Thought Criminal), Sami Bray (Child)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        Excellent HD capture of George Orwell's iconic novel. This controversial and graphic Big Brother play had multiple people leaving their seats. A
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>A Gentleman's Guide to Love and Murder</span>
+        <span class="separator">|</span> 
+        <span>Broadway</span>
+        <span class="separator">|</span> 
+        <span>2014-05-03</span>
+        <span class="separator">|</span> 
+        <span>SunsetBlvd79</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Bryce Pinkham (Monty Navarro), Jefferson Mays (The D'Ysquith Family), Lisa O'Hare (Sibella Hallward), Lauren Worsham (Phoebe D'Ysquith), Jane Carr (Miss Marietta Shingle)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        A beautiful HD capture of the front runner for Best Musical Tony Award. A hilarious show with an equally hilarious cast. Jefferson Mays is an insanely talented actor! A 
+
+May be incorrectly listed as 2014-05-14
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>A New Brain</span>
+        <span class="separator">|</span> 
+        <span>Encores! Off-Center</span>
+        <span class="separator">|</span> 
+        <span>2015-06-24</span>
+        <span class="separator">|</span> 
+        <span>NYCG8R</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Jonathan Groff (Gordon), Dan Fogler (Mr. Bungee), Ana Gasteyer (Mimi), Alyse Alan Louis (Rhoda), Aaron Lazar (Roger), Josh Lamon (Richard), Rema Webb (Lisa), Jenni Barber (Nancy D.), Bradley Dean (Dr. Jafar Berensteiner), Quentin Earl Darrington (Minister)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        Nicely filmed. The disc also includes about three minutes of press reel footage.
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Alice By Heart</span>
+        <span class="separator">|</span> 
+        <span>Off-Broadway</span>
+        <span class="separator">|</span> 
+        <span>2019-03-01</span>
+        <span class="separator">|</span> 
+        <span>StarCuffedJeans</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Molly Gordon (Alice Spencer), Molly Gordon (Alice), Colton Ryan (Alfred Hallam), Colton Ryan (White Rabbit), Colton Ryan (March Hare), Kim Blanck (Tabatha), Kim Blanck (Cheshire Cat), Noah Galvin (Dodgy), Noah Galvin (Duchess), Grace McLean (Red Cross Nurse), Grace McLean (Queen of Hearts), Andrew Kober (Dr. Butridge), Andrew Kober (King of Hearts), Andrew Kober (Jabberwocky), Wesley Taylor (Harold Pudding), Wesley Taylor (Mad Hatter), Catherine Ricafort (Clarissa), Catherine Ricafort (Queen of Diamonds), Heath Saunders (Angus), Heath Saunders (Caterpillar), Kim Blanck (Caterpillar 2), Z Infante (Nigel), Z Infante (Dormouse), Wesley Taylor (Knave of Spades), Z Infante (Knave of Clubs), Heath Saunders (Knave of Hearts), Noah Galvin (Dodo), Andrew Kober (Duck), Catherine Ricafort (Canary), Z Infante (Eaglet), Wesley Taylor (Pigeon), Grace McLean (Magpie), Andrew Kober (Mock Turtle), Wesley Taylor (Mock Mock Turtle), Catherine Ricafort (Mock Mock Mock Turtle), Noah Galvin (Mock Mock Mock Mock Turtle), Mia DiLena (Ensemble), Zachary Downer (Ensemble)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        Really beautiful shot in an intimate space. Lots of zooms, but a good amount of wider shots too with a very limited (almost nonexistent) amount of heads. The lighting in this theater really liked my camera and I know the show almost “by heart” so I think I followed the action as well as possible. My battery died during the last song, but it starts at the very beginning with only one drop out during dialogue.
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Almost Famous</span>
+        <span class="separator">|</span> 
+        <span>Broadway</span>
+        <span class="separator">|</span> 
+        <span>2022-11-01</span>
+        <span class="separator">|</span> 
+        <span>Lasagna</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Casey Likes (William Miller), Solea Pfeiffer (Penny Lane), Van Hughes (u/s Russell Hammond), Anika Larsen (Elaine Miller), Drew Gehling (Jeff Bebe), Rob Colletti (Lester Bangs), Julia Cassandra (Estrella), Jana Djenne Jackson (Polexia), Matt Bittner (Larry Fellows), Katie Ladner (Sapphire), Danny Lindgren (s/w David Felton), Jakeim Hart (Dennis Hope), Gerard Canonico (Dick Roswell), Emily Schultheis (Anita Miller), Brandon Contreras (Silent Ed Vallencourt), Chad Burris (Vic Nettles), Daniel Sovich (Darryl), Libby Winters (Leslie)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        Brilliant capture of this show! Unobstructed aside from minor disruption in the final scenes due to people leaving early.
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Assassins</span>
+        <span class="separator">|</span> 
+        <span>Off-Broadway Revival</span>
+        <span class="separator">|</span> 
+        <span>2022-01-01</span>
+        <span class="separator">|</span> 
+        <span>juniper47</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Steven Pasquale (John Wilkes Booth), Will Swenson (Charles Guiteau), Brandon Uranowitz (Leon Czolgosz), Andy Grotelueschen (Samuel Byck), Wesley Taylor (Giuseppe Zangara), Tavi Gevinson (Lynette "Squeaky" Fromme), Ethan Slater (Lee Harvey Oswald), Judy Kuhn (Sara Jane Moore), Eddie Cooper (The Proprietor), Adam Chanler-Berat (John Hinckley Jr.), Lee Harrington (s/w Emma Goldman), Ethan Slater (Balladeer), Brad Giovanine (Ensemble), Whit K. Lee (Ensemble), Rob Morrison (Ensemble), Katrina Yaukey (Ensemble), Lee Harrington (s/w Ensemble)
+            </span>
+        </div>
+
+        
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Beetlejuice</span>
+        <span class="separator">|</span> 
+        <span>First Broadway Remount</span>
+        <span class="separator">|</span> 
+        <span>2022-04-01</span>
+        <span class="separator">|</span> 
+        <span>StarCuffedJeans</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Alex Brightman (Beetlejuice), Elizabeth Teeter (Lydia Deetz), Kerry Butler (Barbara Maitland), David Josefsberg (Adam Maitland), Adam Dannheisser (Charles Deetz), Leslie Rodriguez Kritzer (Delia Deetz), Natalie Charle Ellis (u/s Miss Argentina), Kelvin Moon Loh (Otho), Danny Rutigliano (Maxie Dean), Zonya Love (Maxine Dean), Zonya Love (Juno), Dana Steingold (Girl Scout), Kate Bailey (Ensemble), Ryan Breslin (Ensemble), Elliott Mattox (Ensemble), Mateo Melendez (Ensemble), Ramone Owens (Ensemble), Commodore C. Primous III (Ensemble), Nevada Riley (Ensemble), Graham Stevens (Ensemble)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        First performance.
+Watermarked version is circulating more than the non-watermarked due to a leak. Check with traders for their files!
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Brokeback Mountain</span>
+        <span class="separator">|</span> 
+        <span>West End</span>
+        <span class="separator">|</span> 
+        <span>2023-05-01</span>
+        <span class="separator">|</span> 
+        <span>Lasagna</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Lucas Hedges (Ennis Del Mar), Mike Faist (Jack Twist), Eddi Reader (Balladeer), Emily Fairn (Alma), Paul Hickey (Older Ennis), Martin Marquez (Bill), Martin Marquez (Jack's Father), Martin Marquez (Joe Agguire), Sophie Reid (Lureen), Sophie Reid (Waitress), Sophie Reid (Backing Vocals)
+            </span>
+        </div>
+
+        
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Cabaret</span>
+        <span class="separator">|</span> 
+        <span>Fifth West End Revival</span>
+        <span class="separator">|</span> 
+        <span>2022-03-01</span>
+        <span class="separator">|</span> 
+        <span>Jagweed</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Eddie Redmayne (Emcee), Emily Benjamin (u/s Sally Bowles), Omari Douglas (Clifford Bradshaw), Liza Sadovy (Fräulein Schneider), Elliot Levey (Herr Schultz), Stewart Clarke (Ernst Ludwig), Anna-Jane Casey (Fräulein Kost), Anna-Jane Casey (Fritzie), Sally Frith (Frenchie), Andre Refig (Max), Daniel Perry (Victor), Theo Maddix (Lulu), Christopher Tendai (Bobby), Sophie Maria Wojna (Rosie), Ela Lisondra (s/w Helga), Matthew Gent (Hans), Lillie-Pearl Wildman (Texas)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        This is the only known recording of Emily Benjamin in the role of Sally Bowles with the original West End revival cast. I would say this is a near perfect capture of this production; very little obstruction, steady, with a mix of wides, mediums and close ups. Recording includes the curtain call and marquee.
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Cabaret</span>
+        <span class="separator">|</span> 
+        <span>Fifth West End Revival</span>
+        <span class="separator">|</span> 
+        <span>2022-06-01</span>
+        <span class="separator">|</span> 
+        <span>Lasagna</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Fra Fee (Emcee), Amy Lennox (Sally Bowles), Christopher Tendai (u/s Clifford Bradshaw), Vivien Parry (Fräulein Schneider), Richard Katz (Herr Schultz), Stewart Clarke (Ernst Ludwig), Sally Frith (u/s Fräulein Kost), Sally Frith (u/s Fritzie), Emily Benjamin (s/w Frenchie), Josh Andrews (s/w Bobby), Chris O'Mara (s/w Hans)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        Sensational capture of this incredible show. Shot from the upper circle with no obstructions. At some points, particularly in Act 2, sobbing (yes, sobbing) can be heard from me. Sorry about that.
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Company</span>
+        <span class="separator">|</span> 
+        <span>Third Broadway Revival</span>
+        <span class="separator">|</span> 
+        <span>2020-03-01</span>
+        <span class="separator">|</span> 
+        <span>StarCuffedJeans</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Katrina Lenk (Bobbie), Patti LuPone (Joanne), Terence Archie (Larry), Matt Doyle (Jamie), Etai Benson (Paul), Jennifer Simard (Sarah), Christopher Sieber (Harry), Rashidra Scott (Susan), Greg Hildreth (Peter), Nikki Renée Daniels (Jenny), Christopher Fitzgerald (David), Claybourne Elder (Andy), Bobby Conte Thornton (PJ), Kyle Dean Massey (Theo), Kathryn Allison (New Yorker), Stanley Bahorek (New Yorker), Britney Coleman (New Yorker), Javier Ignacio (New Yorker), Matt Wall (New Yorker), Anisha Nagarajan (New Yorker)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        You can differentiate this boot from the other one by the same master by the fact that there is no rain at the end of act one. 
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Finding Neverland</span>
+        <span class="separator">|</span> 
+        <span>Pre-Broadway / American Repertory Theater</span>
+        <span class="separator">|</span> 
+        <span>2014-09-03</span>
+        <span class="separator">|</span> 
+        <span>SunsetBlvd79</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Jeremy Jordan (J.M. Barrie), Laura Michelle Kelly (Sylvia Llewelyn Davies), Michael McGrath (Captain James Hook), Michael McGrath (Charles Frohman), Jeanna de Waal (Mary Barrie), Carolee Carmello (Mrs. du Maurier), Aidan Gemme (Peter Llewelyn Davies), Alex Dreier (Michael Llewelyn Davies), Hayden Signoretti (Jack Llewelyn Davies), Sawyer Nunes (George Llewelyn Davies)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        Beautiful HD capture of this sensational new show headed to Broadway. The performances, actors, music, book, and comedy are all divine. I think this will take 2015 Tony and also awards for Jeremy and Laura, it was that stunning! A+
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Frozen</span>
+        <span class="separator">|</span> 
+        <span>Broadway</span>
+        <span class="separator">|</span> 
+        <span>2020-02-01</span>
+        <span class="separator">|</span> 
+        <span>StarCuffedJeans</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Ciara Renée (Elsa), McKenzie Kurtz (Anna), Anna Rae Haller (Young Elsa), Charlie Tassone (Young Anna), Ryann Redmond (Olaf), Noah J. Ricketts (Kristoff), Adam Jepsen (Sven), Ryan McCartan (Hans), Kevin Del Aguila (Oaken), Robert Creighton (Weselton), Donald Jones Jr. (Pabbie), Tracee Beazer (Bulda), Tyrone L. Robinson (King Agnarr), Ann Sanders (Queen Iduna), Robin Masella (Head Handmaiden), Jacob Smith (Bishop), Cajai Kennedy (Ensemble), Charlie Williams (Ensemble), Harris M Turner (Ensemble), Bronwyn Tarboton (s/w Ensemble), Jake David Smith (Ensemble), Anthony Sagaria (Ensemble), Julius Anthony Rubio (Ensemble), Ellen Marlow (Ensemble), Austin Lesch (Ensemble), Nina Lafarga (Ensemble), Charissa Hogeland (Ensemble), Michael Fatica (Ensemble), Spencer Clark (s/w Ensemble), Claire Camp (Ensemble), Keely Beirne (Ensemble), Kate Bailey (Ensemble)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        Beautiful HD capture of the new Broadway cast! Filmed from the left orchestra with a mix of wides, mediums, and closeups. Features the new song I Can't Lose You that replaces For the First Time in Forever (Reprise). Last known full video of the Broadway production before the untimely closing the following month.
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Hadestown</span>
+        <span class="separator">|</span> 
+        <span>Broadway</span>
+        <span class="separator">|</span> 
+        <span>2019-05-23</span>
+        <span class="separator">|</span> 
+        <span>Unknown</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Reeve Carney (Orpheus), Eva Noblezada (Eurydice), Amber Gray (Persephone), Patrick Page (Hades), André De Shields (Hermes), Jewelle Blackman (Fate), Yvette González-Nacer (Fate), Kay Trinidad (Fate), Afra Hines (Worker), John Krause (Worker), Timothy Hughes (Worker), Ahmad Simmons (Worker), Kimberly Marable (Worker)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        Band: Tim Vaughn (Trombone sub), Clara Kennedy (Cello sub), Dana Lyn (Violin), Ben Perowsky (Drums), Robinson Morse (Bass), Michael Chorney (Guitar), Cody Owen Stine (Keys sub)
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Hadestown</span>
+        <span class="separator">|</span> 
+        <span>Broadway</span>
+        <span class="separator">|</span> 
+        <span>2022-02-19</span>
+        <span class="separator">|</span> 
+        <span>musain</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Reeve Carney (Orpheus), Eva Noblezada (Eurydice), Amber Gray (Persephone), Patrick Page (Hades), André De Shields (Hermes), Tara Jackson (u/s Fate), Jewelle Blackman (Fate), Kay Trinidad (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Timothy Hughes (Worker), Grace Yoo (Worker), Trent Saunders (Worker)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        Amber Gray's final performance in Hadestown. Full show is filmed, including the standing ovation that Amber got before the performance even started, right up to the band exiting. Moderate obstruction from the box/bar, etc. Dropouts and shakiness during applause breaks, especially during all of the standing ovations that happened for Amber—what can I say? It was such an emotional night and I was more focused on being in the moment than getting a 4K video. However, what is captured is high quality, and is of a very memorable show. For transparency, some screenshots include the obstructed/less-than-HQ moments, so people know what they're purchasing/watching.
+
+Band: Brian Drye (Trombone), Marika Hughes (Cello), Dana Lyn (Violin), Ben Perowsky (Drums), Robinson Morse (Bass), Ilusha Tsinadze (Guitar), Liam Robinson (Keys)
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Hadestown</span>
+        <span class="separator">|</span> 
+        <span>Broadway</span>
+        <span class="separator">|</span> 
+        <span>2022-06-01</span>
+        <span class="separator">|</span> 
+        <span>StarCuffedJeans</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Reeve Carney (Orpheus), Eva Noblezada (Eurydice), Tara Jackson (u/s Persephone), Alex Puette (u/s Hades), Trent Saunders (u/s Hermes), Jessie Shelton (Fate), Kay Trinidad (Fate), Soara-Joye Ross (Fate)
+            </span>
+        </div>
+
+        
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Hadestown</span>
+        <span class="separator">|</span> 
+        <span>Broadway</span>
+        <span class="separator">|</span> 
+        <span>2022-12-30</span>
+        <span class="separator">|</span> 
+        <span>bikinibottomday</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Reeve Carney (Orpheus), Eva Noblezada (Eurydice), Jewelle Blackman (Persephone), Patrick Page (Hades), Lillias White (Hermes), Amelia Cormack (Fate), Shea Renne (Fate), Soara-Joye Ross (Fate), Emily Afton (Worker), Malcolm Armwood (Worker), Brandon Cameron (Worker), Alex Puette (Worker), Grace Yoo (Worker), Sojourner Brown (Worker)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        Excellent 4K capture of Patrick Page's final performance! A head is visible on the bottom of the frame at times but almost never blocks anything. Some wandering and unfocusing throughout. Fairly Patrick Page centered, as all of Epic 1 and Epic 3 are focused on him as well as some other typically-Orpheus centric moments. Blackout during the beginning of Lady of the Underground, and brief blackout during Epic 3. Includes curtain call, We Raise Our Cups, and speeches by Reeve, Patrick, and director Rachel Chavkin. Audio fed from external source.
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Hadestown</span>
+        <span class="separator">|</span> 
+        <span>Edmonton</span>
+        <span class="separator">|</span> 
+        <span>2017-12-01</span>
+        <span class="separator">|</span> 
+        <span>Unknown</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Reeve Carney (Orpheus), TV Carpio (Eurydice), Amber Gray (Persephone), Patrick Page (Hades), Kingsley Leggs (Hermes), Kira Guloien (Fate), Evangelia Kambites (Fate), Jewelle Blackman (Fate)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        The only known full video bootleg of Edmonton. Postmastered and distributed by musain, threadcutters, and BenTheChipsAreDown. Do not ask for master contact - without getting into too much info, the filmer ended up being a bigot and a creep to cast members, and although this video is not a leak and the distributors have permission to share, they all want to be careful and know who's getting it. Gift Upon Request to those who ask (via the distributors only), but please don't share the video or link in any public setting, and make edits/gifs at your own discretion.
+
+Band: Audrey Ochoa (Trombone), Ian Woodman (Cello), Jim Cockell (Violin), Joel Jeschke (Drums), Aretha Tillotson (Bass), Jim Head (Guitar), Liam Robinson (Keys)
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Hadestown</span>
+        <span class="separator">|</span> 
+        <span>New York Theatre Workshop</span>
+        <span class="separator">|</span> 
+        <span>2016-07-01</span>
+        <span class="separator">|</span> 
+        <span>Unknown</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Damon Daunno (Orpheus), Nabiyah Be (Eurydice), Amber Gray (Persephone), Patrick Page (Hades), Matthew Saldivar (u/s Hermes), Jessie Shelton (Fate), Lulu Fall (Fate), Erica Sweany (s/b Fate)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        The only known full video bootleg of NYTW. Postmastered and distributed by musain, threadcutters, and BenTheChipsAreDown. Do not ask for master contact - without getting into too much info, the filmer ended up being a bigot and a creep to cast members, and although this video is not a leak and the distributors have permission to share, they all want to be careful and know who's getting it. Gift Upon Request to those who ask (via the distributors only), but please don't share the video or link in any public setting, and make edits/gifs at your own discretion.
+
+Band: Tim Vaughn (Trombone sub), Clara Kennedy (Cello sub), Sam Bardfeld (Violin sub), Ben Perowsky (Drums), Robinson Morse (Bass), Michael Chorney (Guitar), Ted Baker (Keys sub)
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Harry Potter and the Cursed Child</span>
+        <span class="separator">|</span> 
+        <span>San Francisco</span>
+        <span class="separator">|</span> 
+        <span>2022-06-01</span>
+        <span class="separator">|</span> 
+        <span>mynewfavoriteday</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                John Skelley (Harry Potter), Benjamin Papac (Albus Severus Potter), Jon Steiger (Scorpius Malfoy), Steve O'Connell (Ron Weasley), Lily Mojekwu (Hermione Granger), Abbi Hawk (Ginny Potter), Lucas Hall (Draco Malfoy), Folami Williams (Rose Granger-Weasley), Folami Williams (Young Hermione), Brittany Zeinstra (Delphi Diggory), Irving Dyson Jr. (Craig Bowker Jr.), Cynthia Jimenez-Hicks (Moaning Myrtle), Cynthia Jimenez-Hicks (Lily Potter Sr.), Cynthia Jimenez-Hicks (Polly Chapman), Geoffrey Wade (Severus Snape), Geoffrey Wade (Lord Voldemort), Logan James Hall (Sorting Hat), Joey LaBrasca (e/c Yann Fredericks), Eleasha Gamble (u/s Dolores Umbridge), Charles Janasz (Amos Diggory), Charles Janasz (Albus Dumbledore), Eleasha Gamble (u/s Professor McGonagall), Melanie Brezill (u/s Trolley Witch), William Bednar-Carter (Cedric Diggory), William Bednar-Carter (James Potter Jr.), William Bednar-Carter (James Potter Sr.), Tuck Sweeney (Karl Jenkins), Tuck Sweeney (Viktor Krum), Logan James Hall (Bane), Christian Pedersen (Professor Mazoni), Jamyl Dobson (V World General), Nathan Hosner (Ministry Official), Chris Jarman (Voice of Phone Box), Ebony Blake (Ensemble), Chanté Odom (Ensemble), Chance Marshaun Hill (Ensemble), Timothy W. Hull (Ensemble), John Alix (Ensemble), Gary-Kayi Fletcher (Ensemble), Kita Grayson (Ensemble)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        Beautiful 4K capture of the San Francisco company with the post-shutdown script. It's filmed in 16:9 with a mix of wides, mediums, and closeups that beautifully capture the shows magic. There's some minor obstructions: the balcony railing can be seen at the bottom during wides and when the action takes place all the way at the front, and a head can be seen at the bottom right corner. There's almost no washout and wandering is minimal, but during darker scenes the action can be harder to make out. The sound is excellent. Includes curtain call and playbill scans.
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Hedwig and the Angry Inch</span>
+        <span class="separator">|</span> 
+        <span>Broadway</span>
+        <span class="separator">|</span> 
+        <span>2015-05-07</span>
+        <span class="separator">|</span> 
+        <span>SunsetBlvd79</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Darren Criss (Hedwig), Rebecca Naomi Jones (Yitzhak), Justin Craig (Skszp), Peter Yanowitz (Schlatko), Tim Mislock (Krzyzhtoff), Matt Duncan (Jacek)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        Beautiful HD capture of Darren and Rebecca, who recently joined the production. Darren really has a stunning take on Hedwig with the deck stacked against him. Great performance, new vocals and filled his own set of high heels! A very worthy successor to JCM and thoroughly entertaining! A+
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Les Misérables</span>
+        <span class="separator">|</span> 
+        <span>Third UK (25th Anniversary) Tour</span>
+        <span class="separator">|</span> 
+        <span>2010-09-25</span>
+        <span class="separator">|</span> 
+        <span>thewho</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                John Owen-Jones (Jean Valjean), Earl Carpenter (Javert), Madalena Alberto (Fantine), Katie Hall (Cosette), Gareth Gates (Marius), Rosalind James (Éponine), Ashley Artus (Thénardier), Jon Robyns (Enjolras), Lynne Wilmott (Madame Thénardier), Max Griesbach (Gavroche), Adam Linstead (Grantaire), Owain Williams (Feuilly), Christopher Jacobsen (Courfeyrac), David Covey (Combeferre), Rhidian Marc (Joly), Carl Mullaney (Bamatabois), Luke Kempner (Montparnasse), Carl Mullaney (Claquesous), David Lawrence (Lesgles), Ian Caddick (Babet), David Lawrence (The Bishop of Digne)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        Excellent single camera filming slight to the right of centre of the stage from the balcony. Good clear view, for the most part with some wonderful close up and full stage shots. Audio was slightly on the quiet side, so I boosted it a little but is otherwise untouched.
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Les Misérables</span>
+        <span class="separator">|</span> 
+        <span>Third US National Tour</span>
+        <span class="separator">|</span> 
+        <span>2000-02-07</span>
+        <span class="separator">|</span> 
+        <span>Unknown</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Ivan Rutherford (Jean Valjean), Stephen Bishop (Javert), Joan Almedilla (Fantine), Regan Thiel (Cosette), Tim Howar (Marius), Sutton Foster (Éponine), J.P. Dougherty (Thénardier), Kevin Earley (Enjolras), Christopher Carlson (Gavroche)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        A GREAT video shot from the center of the mezzanine with a digital camera and no obstructions. Great zooming and framing, the taper obviously knew the show. Crystal clear picture and sound quality. A very professionally done cast/crew listing at the beginning of the tape.
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Les Misérables</span>
+        <span class="separator">|</span> 
+        <span>West End</span>
+        <span class="separator">|</span> 
+        <span>2018-11-01</span>
+        <span class="separator">|</span> 
+        <span>NYCG8R</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Dean Chisnall (Jean Valjean), Bradley Jaden (Javert), Carley Stenson (Fantine), Amara Okereke (Cosette), Toby Miles (Marius), Elena Skye (Éponine), James Hume (u/s Thénardier), Samuel Edwards (Enjolras), Vivien Parry (Madame Thénardier), Logan Clark (Gavroche), Adam Filipe (u/s Grantaire), Joe Vetch (Feuilly), Oliver Brenin (s/w Courfeyrac), Barnaby Hughes (Combeferre), James Nicholson (Joly), Adam Bayjou (Factory Foreman), Sam Harrison (Bamatabois), Ben Tyler (Jean Prouvaire), Ciaran Joyce (Montparnasse), Sam Harrison (Claquesous), Andrew York (Lesgles), Adam Bayjou (Brujon), Ciaran Bowling (s/w Babet), Anna McGarahan (Factory Girl), Ben Tyler (Pimp), Anna McGarahan (Crone), Andrew York (u/s The Bishop of Digne), Adam Bayjou (Champmathieu), Ciaran Bowling (s/w Major Domo), Barnaby Hughes (Fauchelevent)
+            </span>
+        </div>
+
+        
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Next to Normal</span>
+        <span class="separator">|</span> 
+        <span>Scottsdale Community Players</span>
+        <span class="separator">|</span> 
+        <span>2022-01-16</span>
+        <span class="separator">|</span> 
+        <span>MiladydeSummer</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Stephanie Likes (Diana), Caleb Reese (Dan), Casey Likes (Gabe), Nora Palermo (Natalie), Ethan Drew (Henry), Bob Sorenson (Dr. Fine), Bob Sorenson (Dr. Madden)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        Some zoomed out shots due to being a total blindshot. Final note of the show cut off a bit because of house lights coming up. Loud static in audio at first. Head in left corner causes some obstruction. Show starts at ~4 minutes in. First few minutes of the show occasionally have a static noise that briefly muffles the audio.
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Next to Normal</span>
+        <span class="separator">|</span> 
+        <span>TheaterWorks Hartford</span>
+        <span class="separator">|</span> 
+        <span>2017-05-01</span>
+        <span class="separator">|</span> 
+        <span>pro-shot</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Christiane Noll (Diana), David Harris (Dan), John Cardoza (Gabe), Maya Keleher (Natalie), Nick Sacks (Henry), JD Daw (Dr. Fine), JD Daw (Dr. Madden)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        Beautiful multicam proshot archive for theatre.  Rebroadcast in 2020 during quarantine, introduction and watermark at bottom of screen.  Really, a very nice, beautiful video.
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Parade</span>
+        <span class="separator">|</span> 
+        <span>First Broadway Revival</span>
+        <span class="separator">|</span> 
+        <span>2023-03-01</span>
+        <span class="separator">|</span> 
+        <span>bikinibottomday</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Ben Platt (Leo Frank), Micaela Diamond (Lucille Frank), Alex Joseph Grayson (Jim Conley), Erin Rose Doyle (Mary Phagan), Manoel Felciano (Tom Watson), Paul Alexander Nolan (Hugh Dorsey), Eddie Cooper (Newt Lee), Howard McGillin (Judge Roan), Kelli Barrett (Mrs. Phagan), Jay Armstrong Johnson (Britt Craig), Jake Pedersen (Frankie Epps), Emily Rose DeMartino (Essie), Danielle Lee Greaves (Minnie McKnight), Stacie Bono (Sally Slaton), Sophia Manicone (Iola Stover), Howard McGillin (Old Soldier), Christopher Gurr (Luther Rosser), Douglas Lyons (Riley), Ashlyn Maddox (Monteen), Courtnee Carter (Angela), Christopher Gurr (Mr. Peavy), Sean Allan Krill (Governor Slaton), Florrie Bagel (Nurse), Max Chernin (Mr. Turner), Ashlyn Maddox (Lila), Charlie Webb (Young Soldier), Jackson Teeley (Officer Ivey), William Michals (Lt. J.N. Starnes), Beth Kirkpatrick (Nina Formby), Max Chernin (Others), Beth Kirkpatrick (Others), William Michals (Others), Jackson Teeley (Others), Charlie Webb (Others), Florrie Bagel (Others)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        Excellent 4K capture of this stunning production, show and cast. Minor wandering, unfocusing and occasional obstruction throughout, but all action is captured. Includes curtain call and a short clip of intermission, audio fed from external source.
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Ride The Cyclone</span>
+        <span class="separator">|</span> 
+        <span>Off-Broadway</span>
+        <span class="separator">|</span> 
+        <span>2016-01-01</span>
+        <span class="separator">|</span> 
+        <span>house-cam</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Karl Hamilton (The Amazing Karnak), Tiffany Tatreau (Ocean O'Connell Rosenberg), Kholby Wardell (Noel Gruber), Gus Halper (Mischa Bachinski), Alex Wyse (Ricky Potts), Emily Rohm (Jane Doe), Lillian Castillo (Constance Blackwood)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        Archival from the MCC production circa 2016. This was filmed after Taylor Louderman was fired from the show. Multiple copies are circulating – the smaller 1.29 GB MP4 is higher resolution than the 5.28 GB MOV.
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Shucked</span>
+        <span class="separator">|</span> 
+        <span>Broadway</span>
+        <span class="separator">|</span> 
+        <span>2023-04-13</span>
+        <span class="separator">|</span> 
+        <span>Medium Observation</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Caroline Innerbichler (Maizy), Andrew Durand (Beau), Alex Newell (Lulu), John Behlmann (Gordy), Kevin Cahoon (Peanut), Ashley D. Kelley (Storyteller #1), Grey Henson (Storyteller #2), Dwayne Clark (Grandpa), Scott Stangland (Tank), Jimmy Brewer (Ensemble), Audrey Cardwell (Ensemble), Rheaume Crenshaw (Ensemble), Jaygee Macapugay (Ensemble), Yasmeen Sulieman (Ensemble), Quinn VanAntwerp (Ensemble)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        Absolutely perfect video of this show. Very little to no washout, some adjustments throughout.
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Six</span>
+        <span class="separator">|</span> 
+        <span>Broadway</span>
+        <span class="separator">|</span> 
+        <span>2021-12-01</span>
+        <span class="separator">|</span> 
+        <span>juniper47</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Nicole Kyoung-Mi Lambert (s/b Catherine of Aragon), Andrea Macasaet (Anne Boleyn), Abby Mueller (Jane Seymour), Brittney Mack (Anna of Cleves), Samantha Pauly (Katherine Howard), Anna Uzele (Catherine Parr)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        Filmed in 4K (released as 1080p and 4K), audio from external source. Minor obstruction on lower left side that doesn't block much action, but more substantial obstruction on farthest right side that does block only a few brief moments when one or two of the queens were on that side. Otherwise, good clear shots of the stage and capturing most of the group numbers, and closer zooms during solo moments. Includes BC/EFA speech and a special holiday moment. NO PART OF THESE VIDEOS IS EVER TO BE POSTED/SHARED/GIFTED ANYWHERE ONLINE including but not limited to YouTube, Tumblr, Vimeo, Reddit, Torrents, social media, etc. Never to be sold except by master.
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Spring Awakening (Sheik/Sater)</span>
+        <span class="separator">|</span> 
+        <span>Broadway</span>
+        <span class="separator">|</span> 
+        <span>2007-02-10</span>
+        <span class="separator">|</span> 
+        <span>SunsetBlvd79</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Jonathan Groff (Melchior Gabor), Lea Michele (Wendla Bergmann), John Gallagher Jr. (Moritz Stiefel), Phoebe Strole (u/s Ilse Neumann), Lilli Cooper (Martha Bessell), Jonathan B. Wright (Hanschen Rilow), Brian Charles Johnson (Otto Lämmermeier), Skylar Astin (Georg Zirschnitz), Remy Zaken (Thea), Krysta Rodriguez (u/s Anna), Gideon Glick (Ernst Robel), Frances Mercanti-Anthony (u/s The Adult Women), Stephen Spinella (The Adult Men)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        AMAZING capture, closeups, performances. Not to be missed. A+
+
+Content warning, there is partial nudity in this bootleg.
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Spring Awakening (Sheik/Sater)</span>
+        <span class="separator">|</span> 
+        <span>Deaf West Theatre Remount</span>
+        <span class="separator">|</span> 
+        <span>2015-06-13</span>
+        <span class="separator">|</span> 
+        <span>SJ Bernly</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Austin McKenzie (Melchior Gabor), Sandra Mae Frank (Wendla Bergmann), Daniel Durant (Moritz Stiefel), Krysta Rodriguez (Ilse Neumann), Treshelle Edmond (Martha Bessell), Andy Mientus (Hanschen Rilow), Miles Barbee (Otto Lämmermeier), Alex Wyse (Georg Zirschnitz), Amelia Hensley (Thea), Ali Stroker (Anna), Joshua Castille (Ernst Robel), Hillary Baack (The Adult Women), Howie Seago (The Adult Men), Katie Boeck (Voice of Wendla), Alex Boniello (Voice of Moritz), Kathryn Gallagher (Voice of Martha), Daniel David Stewart (Voice of Ernst), Sean Grandillo (Voice of Otto), Lauren Luiz (Voice of Thea), Daniel Marmion (Voice of Adult Men), Natacha Roi (Voice of Adult Women), Lauren Luiz (Melitta), Alexandra Winter (Greta Brandenburg)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        Fantastic capture of Deaf West's production during its run at the Wallis Annenberg. Very well captured with no obstructions or washout, and just a few seconds of dropouts throughout the entire show, most of which happen between scenes. Great picture and sound throughout.
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Spring Awakening (Sheik/Sater)</span>
+        <span class="separator">|</span> 
+        <span>Off-West End (Almeida)</span>
+        <span class="separator">|</span> 
+        <span>2021-12-01</span>
+        <span class="separator">|</span> 
+        <span>hitmewithyourbethshot</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Laurie Kynaston (Melchior Gabor), Amara Okereke (Wendla Bergmann), Stuart Thompson (Moritz Stiefel), Carly-Sophia Davies (Ilse Neumann), Bella Maclean (Martha Bessell), Nathan Armarkwei-Laryea (Hanschen Rilow), Joe Pitts (Georg Zirschnitz), Zheng Xi Yong (Ernst Robel), Catherine Cusack (The Adult Women), Mark Lockyer (The Adult Men)
+            </span>
+        </div>
+
+        
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>The 25th Annual Putnam County Spelling Bee</span>
+        <span class="separator">|</span> 
+        <span>Second US National Tour (Non-Equity)</span>
+        <span class="separator">|</span> 
+        <span>2008-11-16</span>
+        <span class="separator">|</span> 
+        <span>juniper47</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Nikki Switzer (Rona Lisa Peretti), Brittany Ross (Olive Ostrovsky), Christian Busath (William Barfée), Joanna Krupnick (Logainne Schwartzandgrubenierre), Don Juan Seward II (Mitch Mahoney), Ryan Goodale (Leaf Coneybear), Zandi DeJesus (Marcy Park), Kavin Panmeechao (Chip Tolentino), Anthony Lopez (Douglas Panch)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        Filmed in 16:9, SD. Almost no obstruction except for bottom of screen in widest shots. Fun cast, great audience energy, and the audience spellers were great, too! External audio fed in and synced with video.
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>The Book of Mormon</span>
+        <span class="separator">|</span> 
+        <span>First UK & Ireland Tour</span>
+        <span class="separator">|</span> 
+        <span>2019-01-01</span>
+        <span class="separator">|</span> 
+        <span>Rumpel</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Kevin Clay (Elder Price), Conner Peirson (Elder Cunningham), Nicole-Lily Baisden (Nabulungi), Will Hawksworth (Elder McKinley), Ewen Cummins (Mafala Hatimbi), Thomas Vernal (General), Johnathan Tweedie (Mission President), Johnathan Tweedie (Joseph Smith), Tre Copeland-Williams (Doctor), Cleopatra Isaac (Mrs. Brown), David Brewis (Cunningham's Father), Johnathan Tweedie (Price's Father), Jemal Felix (Guard), Lukin Simmonds (Guard), Evan James (Ensemble), Alex James-Hatton (Ensemble), George Crawford (Ensemble), Jed Berry (Ensemble), Iz Hesketh (Ensemble), Fergal McGoff (Ensemble)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        One of the best videos of this show out there. Recorded from the right wing, doesnt miss any action. High quality video and excellent sound. Kevin is a very good Elder Price.
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>The Grinning Man</span>
+        <span class="separator">|</span> 
+        <span>Bristol Old Vic</span>
+        <span class="separator">|</span> 
+        <span>2016-11-01</span>
+        <span class="separator">|</span> 
+        <span>pro-shot</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Louis Maskell (Grinpayne), Julian Bleach (Barkilphedro), Sean Kingsley (Ursus), Audrey Brisson (Dea), Gloria Onitiri (Josiana), Ewan Black (Osric), Stuart Neal (Dirry-Moir), Patrycja Kujawska (Queen Angelica), Ewan Black (Trelaw), Gloria Obianyo (Quake), Gloria Obianyo (Mother)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        Streamed on Bristol Old Vic YouTube Channel. Available in 4K.
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>The Lion, the Witch and the Wardrobe (Cookson)</span>
+        <span class="separator">|</span> 
+        <span>First UK Tour</span>
+        <span class="separator">|</span> 
+        <span>2022-04-01</span>
+        <span class="separator">|</span> 
+        <span>sandrabanana</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Ammar Duffus (Peter Pevensie), Robyn Sinclair (Susan Pevensie), Shaka Kalokoh (Edmund Pevensie), Karise Yansen (Lucy Pevensie), Chris Jared (Aslan), Samantha Womack (White Witch), Samantha Womack (Mrs. Macready), Jez Unwin (Mr. Tumnus), Sam Buttery (Mr. Beaver), Christina Tedders (Mrs. Beaver), Johnson Willis (Professor Kirk), Michael Ahomka-Lindsay (Maugrim), Rachel Dawson (Blue Badger), Scott Brooks (Fox Trot), Ollie Bingham (March Hare), Rachel Dawson (Spirit Of The Moon), Rachel Dawson (Miss Chutney), Johnson Willis (White Mouse), Grace Wylde (Robin), Kate Parr (Phoenix), Oliver Grant (Mr. Wilson), Oliver Grant (Schrodinger), Scott Brooks (Mr. Pope), Oliver Grant (Red Squirrel), Matthew James Hinchliffe (Mr. Marsden), Grace Wylde (Mrs. Pevensie), Oliver Grant (Head Cruel), Michael Ahomka-Lindsay (White Stag), Matthew James Hinchliffe (Mauve Mole), Kate Parr (Miss Gumley-Warmley), Ollie Bingham (Mr. Brinkworth), Grace Wylde (Gryphon), Johnson Willis (Father Christmas), Michael Ahomka-Lindsay (Satyr), Michael Ahomka-Lindsay (Soldier), Shaun McCourt (Mr. Granville), Shaun McCourt (Jack Rabbit), Johnson Willis (Wise Owl), Ollie Bingham (Aslan Puppeteer), Oliver Grant (Aslan Puppeteer), Shaun McCourt (Aslan Puppeteer)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        Pretty much a perfect capture of this beautiful show—no blackouts or obstructions. Includes bows.
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>The Mousetrap</span>
+        <span class="separator">|</span> 
+        <span>West End</span>
+        <span class="separator">|</span> 
+        <span>2021-05-01</span>
+        <span class="separator">|</span> 
+        <span>hitmewithyourbethshot</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Cassidy Janson (Mollie Ralston), Danny Mac (Giles Ralston), Alexander Wolfe (Christopher Wren), Susan Penhaligon (Mrs. Boyle), Derek Griffiths (Major Metcalf), Lizzie Muncey (Miss Casewell), David Rintoul (Mr. Paravicini), Paul Hilliar (Detective Sergeant Trotter)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        MTS, shot around heads and safety rails. This video is never to be publicly shared on YouTube, tumblr, Facebook etc.
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>The Phantom of the Opera (Andrew Lloyd Webber)</span>
+        <span class="separator">|</span> 
+        <span>West End</span>
+        <span class="separator">|</span> 
+        <span>2023-01-01</span>
+        <span class="separator">|</span> 
+        <span>Lasagna</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Killian Donnelly (The Phantom of the Opera), Lucy St. Louis (Christine Daaé), Matt Blaker (Raoul de Chagny), Kelly Glyptis (Carlotta Giudicelli), Matt Harrop (Monsieur Firmin), James Hume (u/s Monsieur André), Francesca Ellis (Madame Giry), Ellie Young (Meg Giry), Andrew York (u/s Joseph Buquet), Tim Southgate (u/s Monsieur Reyer), Edward Court (u/s Auctioneer), Andrew York (s/w Marksman), Hywel Dowsell (s/w Monsieur Lefèvre), Hollie Aires (s/w Confidante), Olivia Holland-Rose (s/w Madame Firmin), Manon Taris (e/c Wild Woman)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        Wonderful capture taken in Lucy’s last weeks. Very minor obstruction from heads that don’t block any of the action.
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>The Secret Life of Bees</span>
+        <span class="separator">|</span> 
+        <span>Off-West End</span>
+        <span class="separator">|</span> 
+        <span>2023-04-01</span>
+        <span class="separator">|</span> 
+        <span>Lasagna</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Eleanor Worthington-Cox (Lily Owens), Rachel John (August Boatwright), Chrystine Symone (u/s Rosaleen Daise), Ava Brennan (June Boatwright), Danielle Fiamanya (May Boatwright), Mark Meadows (T-Ray Owens), Noah Thomas (Zachary Taylor), Tarinn Callender (Neil), Richard James-Neale (Clayton Forrest), Richard James-Neale (Franklin Posey), Madeline Charlemagne (Daughter of Mary), Shekinah McFarlane (Daughter of Mary), Richard James-Neale (Police Officer), Daniel Krikler (Police Officer), Daniel Krikler (Clerk), Daniel Krikler (Card Player), Daniel Krikler (Radio Announcer), Richard James-Neale (Shopkeeper)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        Lovely capture of Chrystine’s emotional last minute debut as Rosaleen! Shot over heads but mostly clear view.
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Wicked</span>
+        <span class="separator">|</span> 
+        <span>Broadway</span>
+        <span class="separator">|</span> 
+        <span>2004-07-18</span>
+        <span class="separator">|</span> 
+        <span>Pigerty</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Idina Menzel (Elphaba), Kristin Chenoweth (Glinda), Norbert Leo Butz (Fiyero), Sean McCourt (u/s The Wizard), Carole Shelley (Madame Morrible), Michelle Federer (Nessarose), Randy Harrison (t/r Boq), William Youmans (Doctor Dillamond)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        This is Kristin and Norbert's last show. It was also supposed to be Joel Grey's last show, but he was ill. Video is sound only for the first 4 minutes and for the last 30 seconds of Defying Gravity. This is a great video with excellent sound. Includes the speech by Idina. This bootleg is a treasure.
+Multiple copies are circulating. The best is the 7.8 GB file, which has higher video resolution, working menus, and the playbill. The 7.63 GB file has the same video quality but no playbill, skips 1 minute in late Act 1 (A Sentimental Man (Reprise)), skips the first 1.5 minutes of Act 2, and the smalls may glitch such that the last section of Act 1 doesn't play at all. The 4.07 GB file has worse video quality but does have a working menu, and includes the playbill and various extras (TV spots, Macy's special, Seth's Broadway Chatterbox).
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Wicked</span>
+        <span class="separator">|</span> 
+        <span>Broadway</span>
+        <span class="separator">|</span> 
+        <span>2013-05-12</span>
+        <span class="separator">|</span> 
+        <span>Lanelle</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Willemijn Verkaik (Elphaba), Katie Rose Clarke (Glinda), Kyle Dean Massey (Fiyero), Adam Grupper (The Wizard), Randy Danson (Madame Morrible), Catherine Charlebois (Nessarose), F. Michael Haynie (Boq), John Schiappa (Doctor Dillamond)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        Filmed from the right orchestra, at a slight angle, but excellent quality. The taper originally released this as a blu-ray, 2-disc DVDs or 1-disc DVD, so make sure to get the version that best suits your needs.
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Wicked</span>
+        <span class="separator">|</span> 
+        <span>Broadway</span>
+        <span class="separator">|</span> 
+        <span>2019-03-01</span>
+        <span class="separator">|</span> 
+        <span>StarCuffedJeans</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Laurel Harris (s/b Elphaba), Katie Rose Clarke (Glinda), Ryan McCartan (Fiyero), Michael McCormick (The Wizard), Nancy Opel (Madame Morrible), Gizel Jimenez (Nessarose), Jesse JP Johnson (Boq), Jamie Jackson (Doctor Dillamond), Manuel Herrera (Chistery), Kathy Santen (Midwife), Sterling Masters (Witch's Mother), William Ryall (Witch's Father), William Ryall (Ozian Official)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        This is a vivid 4K video with almost no obstructions. Pretty much everything is centered, with beautiful zooms but also wider shots that showcase the dancing and set design. At times the video appears on an angle because my wrists are weak, but you don't miss anything because of it. There is also washout at times, but I do believe my camera handles the spotlights better than in a lot of Wicked videos. Act 2 starts a minute into the performance. All in all, this is a gorgeous capture of old and new cast members... I'm not finished yet in this bootleg business but if I was, this could be my magnum opus.
+    </div>
+</div>
+
+    </div>,    <div class="recording-card">
+        <h2 class="header">
+            <span>Wicked</span>
+        <span class="separator">|</span> 
+        <span>Broadway</span>
+        <span class="separator">|</span> 
+        <span>2019-09-01</span>
+        <span class="separator">|</span> 
+        <span>StarCuffedJeans</span>
+        <span class="separator">|</span> 
+        <span class="capitalize-text">video</span>
+        </h2>
+
+        <div class="info-section">
+            <span class="label">Cast:</span>
+            <span id="cast-display" class="content-text">
+                Hannah Corneau (Elphaba), Brittney Johnson (s/b Glinda), Kyle Dean Massey (t/r Fiyero), Michael McCormick (The Wizard), Nancy Opel (Madame Morrible), Gizel Jimenez (Nessarose), Jesse JP Johnson (Boq), Jamie Jackson (Doctor Dillamond), Chase Madigan (Chistery), Christianne Tisdale (Midwife), Courtney Iventosch (Witch's Mother)
+            </span>
+        </div>
+
+        
+<div class="info-section">
+    <span class="label">Notes:</span>
+    <div class="notes-text">
+        Excellent HD capture of Broadway's first Black Glinda and the first Elphaba to have never played the role before in over half a decade! A very Elphaba and Glinda-centric video, it's filmed from the left orchestra with a mix of wides, mediums, and many closeups, with occasional dropouts due to ushers. A bit shaky throughout. Both acts start a minute in. Please do not post screenshots of this video on Twitter ever. Gifs on Tumblr are okay after the NFT date, but don't go linking things to actors and shows.
+    </div>
+</div>
+
+    </div>    
+</body> 
+</html>
