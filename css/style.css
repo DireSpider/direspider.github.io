@@ -223,6 +223,10 @@ body { font-family: sans-serif; line-height: 1.6; margin: 0; color: #333; }
     text-decoration: none;
 }
 
+.upper-case{
+       text-transform: uppercase;
+}
+
 /* Mobile Responsiveness for Split Layout */
 @media (max-width: 768px) {
     .split-layout {
