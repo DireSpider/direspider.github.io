@@ -1,30 +1,30 @@
 ---
 ---
 
-body { font-family: sans-serif; line-height: 1.6; margin: 0; color: #333; }
-        header { background: #222; color: #fff; padding: 1rem 0; text-align: center; }
-        nav { background: #444; padding: 0.5rem; text-align: center; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        nav a:hover { text-decoration: underline; }
+body { font-family: sans-serif; line-height: 1.6; margin: 0; background-color: #f8fafc; color: #334155; }
+        header { background: linear-gradient(135deg, #4f46e5, #7c3aed); color: #fff; padding: 1.5rem 0; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); }
+        nav { background: #312e81; padding: 0.75rem; text-align: center; }
+        nav a { color: #e0e7ff; margin: 0 15px; text-decoration: none; font-weight: bold; transition: color 0.2s ease; }
+        nav a:hover { color: #ffffff; text-decoration: underline; text-decoration-color: #818cf8; text-underline-offset: 4px; }
         main { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
-        footer { text-align: center; padding: 2rem; font-size: 0.8rem; color: #777; border-top: 1px solid #eee; }
+        footer { text-align: center; padding: 2rem; font-size: 0.85rem; color: #64748b; border-top: 1px solid #e2e8f0; margin-top: 2rem; }
 
 /* --- Recording Card Styles --- */
 
 .recording-card {
     background-color: #ffffff;
-    border: 1px solid #e5e5e5;
-    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Adds a sleek, floating effect when hovering over a card */
+/* Adds a sleek, floating effect with a subtle indigo glow when hovering */
 .recording-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(79, 70, 229, 0.12);
 }
 
 /* Header Styling */
@@ -32,13 +32,13 @@ body { font-family: sans-serif; line-height: 1.6; margin: 0; color: #333; }
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #222;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1e293b;
     margin-top: 0;
     margin-bottom: 1rem;
     padding-bottom: 0.75rem;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f1f5f9;
 }
 
 .recording-card .header span {
@@ -47,31 +47,35 @@ body { font-family: sans-serif; line-height: 1.6; margin: 0; color: #333; }
 
 /* De-emphasize the separators so the text stands out */
 .recording-card .header .separator {
-    color: #bbb;
+    color: #94a3b8;
     font-weight: 400;
     font-size: 0.9rem;
 }
 
-/* Turns the media type (e.g., "audio") into a modern badge */
+/* Turns the media type (e.g., "audio") into a modern gradient badge */
 .recording-card .media-type-badge {
     text-transform: capitalize;
-    background: #444;
+    background: linear-gradient(135deg, #0ea5e9, #3b82f6);
     color: #fff;
     font-size: 0.75rem;
-    padding: 0.2rem 0.6rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
     border-radius: 12px;
     margin-left: auto; /* Pushes the badge to the far right */
     letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
 }
 
 .recording-card .nft-badge {
     text-transform: uppercase;
-    background: #d32f2f; /* A standard, professional red */
+    background: linear-gradient(135deg, #f43f5e, #f97316); /* A vibrant coral/orange */
     color: #fff;
     font-size: 0.75rem;
-    padding: 0.2rem 0.6rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
     border-radius: 12px;
     letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(244, 63, 94, 0.2);
 }
 
 /* Information Sections (Cast, Notes, etc.) */
@@ -89,7 +93,7 @@ body { font-family: sans-serif; line-height: 1.6; margin: 0; color: #333; }
 .info-section .label {
     font-weight: 700;
     font-size: 0.85rem;
-    color: #666;
+    color: #64748b;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     min-width: 70px; /* Keeps the text content vertically aligned */
@@ -98,18 +102,18 @@ body { font-family: sans-serif; line-height: 1.6; margin: 0; color: #333; }
 
 .content-text {
     font-size: 0.95rem;
-    color: #333;
-    line-height: 1.5;
+    color: #334155;
+    line-height: 1.6;
 }
 
-/* Gives the notes section a clean, callout-box appearance */
+/* Gives the notes section a clean, colorful callout-box appearance */
 .notes-text {
     font-size: 0.9rem;
-    color: #555;
-    background: #f9f9f9;
-    padding: 0.75rem 1rem;
-    border-left: 3px solid #888;
-    border-radius: 0 4px 4px 0;
+    color: #475569;
+    background: #f0fdf4; /* Very soft green */
+    padding: 0.85rem 1rem;
+    border-left: 4px solid #10b981; /* Emerald green accent border */
+    border-radius: 0 6px 6px 0;
     width: 100%;
     margin-top: 0.25rem;
 }
@@ -126,8 +130,6 @@ body { font-family: sans-serif; line-height: 1.6; margin: 0; color: #333; }
 }
 
 
-
-
 /* --- Landing Page Styles --- */
 
 .welcome-message {
@@ -136,29 +138,29 @@ body { font-family: sans-serif; line-height: 1.6; margin: 0; color: #333; }
 }
 
 .welcome-message h2 {
-    color: #222;
+    color: #1e293b;
     margin-bottom: 0.5rem;
 }
 
-/* Emphasized Trading Status Banner */
+/* Emphasized Trading Status Banner - Colorful & Trustworthy */
 .trading-status {
-    background-color: #f4f4f4;
-    border-left: 5px solid #222;
+    background-color: #e0e7ff;
+    border-left: 5px solid #4f46e5;
     padding: 1.5rem;
     text-align: center;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #222;
+    color: #312e81;
     margin-bottom: 0.5rem;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(79, 70, 229, 0.1);
     letter-spacing: 0.5px;
 }
 
 .last-updated {
     text-align: center;
     font-size: 0.85rem;
-    color: #777;
+    color: #64748b;
     font-style: italic;
 }
 
@@ -169,30 +171,30 @@ body { font-family: sans-serif; line-height: 1.6; margin: 0; color: #333; }
     justify-content: space-between;
 }
 
-/* Styling columns to match your existing recording-card style */
+/* Styling columns to match your new recording-card style */
 .split-column {
     flex: 1;
     background-color: #ffffff;
-    border: 1px solid #e5e5e5;
-    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
     padding: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
 }
 
 .split-column h2 {
     margin-top: 0;
-    border-bottom: 2px solid #f0f0f0;
+    border-bottom: 2px solid #f1f5f9;
     padding-bottom: 0.75rem;
-    color: #222;
-    font-size: 1.2rem;
+    color: #1e293b;
+    font-size: 1.25rem;
 }
 
 .split-column h3 {
-    color: #444;
+    color: #4f46e5; /* Accent color for subheaders */
     font-size: 1.05rem;
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #e2e8f0;
     padding-bottom: 0.3rem;
 }
 
@@ -202,32 +204,33 @@ body { font-family: sans-serif; line-height: 1.6; margin: 0; color: #333; }
 
 .split-column li {
     margin-bottom: 0.6rem;
-    color: #333;
+    color: #334155;
     font-size: 0.95rem;
 }
 
 /* Email Link Callout */
 .email-container {
     margin-top: 2rem;
-    padding-top: 1rem;
-    border-top: 1px solid #f0f0f0;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e2e8f0;
     font-weight: 600;
     text-align: center;
 }
 
 .email-link {
     display: inline-block;
-    background: #222;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+    background: #4f46e5;
+    color: #ffffff;
+    padding: 0.6rem 1.25rem;
+    border-radius: 6px;
     text-decoration: none;
     margin-left: 0.5rem;
-    transition: background 0.2s ease;
+    transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .email-link:hover {
-    background: #444;
+    background: #4338ca;
+    transform: translateY(-1px);
     text-decoration: none;
 }
 
@@ -238,30 +241,30 @@ body { font-family: sans-serif; line-height: 1.6; margin: 0; color: #333; }
 /* Encora Button Styling */
 .encora-container {
     margin-top: 1.25rem;
-        text-align: center;
-        margin-bottom: 1.25rem;
+    text-align: center;
+    margin-bottom: 1.25rem;
 }
 
 .encora-button {
     display: inline-block;
     background: #ffffff;
-    color: #222;
-    border: 2px solid #222;
-    padding: 0.5rem 1.5rem;
+    color: #4f46e5;
+    border: 2px solid #4f46e5;
+    padding: 0.6rem 1.5rem;
     font-weight: 700;
     font-size: 0.95rem;
-    border-radius: 6px;
+    border-radius: 8px;
     text-decoration: none;
-    transition: all 0.2s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
 }
 
 /* Reverses the colors and adds a floating effect on hover */
 .encora-button:hover {
-    background: #222;
+    background: #4f46e5;
     color: #ffffff;
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgba(79, 70, 229, 0.15);
     text-decoration: none;
 }
 
