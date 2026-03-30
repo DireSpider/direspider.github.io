@@ -236,6 +236,34 @@ body { font-family: sans-serif; line-height: 1.6; margin: 0; color: #333; }
        text-transform: uppercase;
 }
 
+/* Encora Button Styling */
+.encora-container {
+    margin-top: 1.25rem;
+}
+
+.encora-button {
+    display: inline-block;
+    background: #ffffff;
+    color: #222;
+    border: 2px solid #222;
+    padding: 0.5rem 1.5rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Reverses the colors and adds a floating effect on hover */
+.encora-button:hover {
+    background: #222;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
 /* Mobile Responsiveness for Split Layout */
 @media (max-width: 768px) {
     .split-layout {
