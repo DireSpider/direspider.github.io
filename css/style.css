@@ -27,11 +27,12 @@ body { font-family: sans-serif; line-height: 1.6; margin: 0; background-color: #
     box-shadow: 0 12px 24px rgba(79, 70, 229, 0.12);
 }
 
-/* Header Styling */
+/* --- Header Layout --- */
 .recording-card .header {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    flex-wrap: nowrap; /* Prevents the badges from dropping to a new line */
+    justify-content: space-between; /* Pushes badges to the far right */
+    align-items: flex-start; /* Keeps badges pinned to the top if text wraps */
     font-size: 1.15rem;
     font-weight: 700;
     color: #1e293b;
@@ -39,20 +40,38 @@ body { font-family: sans-serif; line-height: 1.6; margin: 0; background-color: #
     margin-bottom: 1rem;
     padding-bottom: 0.75rem;
     border-bottom: 1px solid #f1f5f9;
+    gap: 1rem; /* Ensures a minimum gap between text and badges */
+}
+
+/* Container for the text that is allowed to wrap */
+.header-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex: 1; /* Takes up the remaining space on the left */
 }
 
 .recording-card .header span {
     margin-right: 0.3rem; 
 }
 
-/* De-emphasize the separators so the text stands out */
+/* De-emphasize the separators */
 .recording-card .header .separator {
     color: #94a3b8;
     font-weight: 400;
     font-size: 0.9rem;
 }
 
-/* Turns the media type (e.g., "audio") into a modern gradient badge */
+/* Container for the badges */
+.header-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem; /* Automatically spaces multiple badges */
+    flex-shrink: 0; /* Prevents the badges from shrinking when text gets long */
+    justify-content: flex-end;
+}
+
+/* --- Badges --- */
 .recording-card .media-type-badge {
     text-transform: capitalize;
     background: linear-gradient(135deg, #0ea5e9, #3b82f6);
@@ -61,14 +80,14 @@ body { font-family: sans-serif; line-height: 1.6; margin: 0; background-color: #
     font-weight: 600;
     padding: 0.25rem 0.75rem;
     border-radius: 12px;
-    margin-left: auto; /* Pushes the badge to the far right */
     letter-spacing: 0.5px;
     box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
+    margin: 0; /* Resetting margin since the parent container handles it now */
 }
 
 .recording-card .nft-badge {
     text-transform: uppercase;
-    background: linear-gradient(135deg, #f43f5e, #f97316); /* A vibrant coral/orange */
+    background: linear-gradient(135deg, #f43f5e, #f97316);
     color: #fff;
     font-size: 0.75rem;
     font-weight: 600;
@@ -76,6 +95,7 @@ body { font-family: sans-serif; line-height: 1.6; margin: 0; background-color: #
     border-radius: 12px;
     letter-spacing: 0.5px;
     box-shadow: 0 2px 4px rgba(244, 63, 94, 0.2);
+    margin: 0;
 }
 
 /* Information Sections (Cast, Notes, etc.) */
