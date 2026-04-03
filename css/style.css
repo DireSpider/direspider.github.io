@@ -98,6 +98,19 @@ body { font-family: sans-serif; line-height: 1.6; margin: 0; background-color: #
     margin: 0;
 }
 
+.recording-card .non-encora-badge {
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #34d399, #10b981); /* Emerald green gradient */
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2); /* Matching shadow */
+    margin: 0;
+}
+
 /* Information Sections (Cast, Notes, etc.) */
 .info-section {
     display: flex;
