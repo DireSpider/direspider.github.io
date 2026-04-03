@@ -9,6 +9,38 @@ body { font-family: sans-serif; line-height: 1.6; margin: 0; background-color: #
         main { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
         footer { text-align: center; padding: 2rem; font-size: 0.85rem; color: #64748b; border-top: 1px solid #e2e8f0; margin-top: 2rem; }
 
+
+/* --- Badge Legend Styles --- */
+.badge-legend {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.legend-title {
+    font-weight: 700;
+    color: #1e293b;
+    font-size: 0.95rem;
+    margin-right: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    color: #475569;
+}
+
 /* --- Recording Card Styles --- */
 
 .recording-card {
