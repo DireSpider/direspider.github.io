@@ -1,159 +1,246 @@
 ---
 ---
 
-body { font-family: sans-serif; line-height: 1.6; margin: 0; background-color: #f8fafc; color: #334155; }
-        header { background: linear-gradient(135deg, #4f46e5, #7c3aed); color: #fff; padding: 1.5rem 0; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); }
-        nav { background: #312e81; padding: 0.75rem; text-align: center; }
-        nav a { color: #e0e7ff; margin: 0 15px; text-decoration: none; font-weight: bold; transition: color 0.2s ease; }
-        nav a:hover { color: #ffffff; text-decoration: underline; text-decoration-color: #818cf8; text-underline-offset: 4px; }
-        main { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
-        footer { text-align: center; padding: 2rem; font-size: 0.85rem; color: #64748b; border-top: 1px solid #e2e8f0; margin-top: 2rem; }
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
+:root {
+    --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    
+    /* Harmonious Color Palette */
+    --bg-main: #f8fafc;
+    --bg-card: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+    --border-light: #e2e8f0;
+    --border-focus: #cbd5e1;
+    
+    /* Accents & Gradients */
+    --primary: #4f46e5;
+    --primary-light: #818cf8;
+    --primary-dark: #3730a3;
+    --primary-gradient: linear-gradient(135deg, #4f46e5, #7c3aed);
+    --header-gradient: linear-gradient(135deg, #1e1b4b, #312e81, #4f46e5);
+    
+    /* Badges */
+    --badge-media-gradient: linear-gradient(135deg, #0ea5e9, #2563eb);
+    --badge-nft-gradient: linear-gradient(135deg, #f43f5e, #e11d48);
+    --badge-non-encora-gradient: linear-gradient(135deg, #10b981, #059669);
+    --badge-commission-gradient: linear-gradient(135deg, #a855f7, #7c3aed);
+    
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.02);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+    --shadow-hover: 0 20px 25px -5px rgba(79, 70, 229, 0.1), 0 10px 10px -5px rgba(79, 70, 229, 0.04);
+    
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body { 
+    font-family: var(--font-sans); 
+    line-height: 1.6; 
+    margin: 0; 
+    background-color: var(--bg-main); 
+    color: var(--text-secondary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Header & Navigation --- */
+header { 
+    background: var(--header-gradient); 
+    color: #fff; 
+    padding: 2.5rem 1rem; 
+    text-align: center; 
+    box-shadow: var(--shadow-md); 
+    position: relative;
+    overflow: hidden;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+nav { 
+    background: #1e1b4b; 
+    padding: 0.5rem 1rem; 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+}
+
+nav a { 
+    color: #cbd5e1; 
+    padding: 0.6rem 1.1rem;
+    text-decoration: none; 
+    font-weight: 600; 
+    font-size: 0.95rem;
+    border-radius: var(--radius-sm);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+nav a:hover { 
+    color: #ffffff; 
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+nav a.active {
+    color: #ffffff;
+    background-color: var(--primary);
+}
+
+main { 
+    max-width: 850px; 
+    margin: 2.5rem auto; 
+    padding: 0 1.25rem; 
+}
+
+footer { 
+    text-align: center; 
+    padding: 3rem 1rem; 
+    font-size: 0.85rem; 
+    color: var(--text-muted); 
+    border-top: 1px solid var(--border-light); 
+    margin-top: 4rem; 
+    background-color: #ffffff;
+}
 
 /* --- Badge Legend Styles --- */
 .badge-legend {
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    padding: 1rem 1.5rem;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
     margin-bottom: 2rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 1.25rem;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    box-shadow: var(--shadow-sm);
 }
 
 .legend-title {
-    font-weight: 700;
-    color: #1e293b;
-    font-size: 0.95rem;
-    margin-right: 0.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    font-size: 0.85rem;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
 }
 
 .legend-item {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.6rem;
     font-size: 0.9rem;
-    color: #475569;
+    color: var(--text-secondary);
 }
 
 /* --- Recording Card Styles --- */
-
 .recording-card {
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    margin-bottom: 1.75rem;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Adds a sleek, floating effect with a subtle indigo glow when hovering */
 .recording-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 24px rgba(79, 70, 229, 0.12);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
 }
 
-/* --- Header Layout --- */
+/* --- Card Header Layout --- */
 .recording-card .header {
     display: flex;
-    flex-wrap: nowrap; /* Prevents the badges from dropping to a new line */
-    justify-content: space-between; /* Pushes badges to the far right */
-    align-items: flex-start; /* Keeps badges pinned to the top if text wraps */
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    align-items: center; 
     font-size: 1.15rem;
     font-weight: 700;
-    color: #1e293b;
+    color: var(--text-primary);
     margin-top: 0;
-    margin-bottom: 1rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid #f1f5f9;
-    gap: 1rem; /* Ensures a minimum gap between text and badges */
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid var(--border-light);
+    gap: 0.75rem; 
 }
 
-/* Container for the text that is allowed to wrap */
+/* Container for text metadata */
 .header-info {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    flex: 1; /* Takes up the remaining space on the left */
+    gap: 0.4rem;
+    flex: 1; 
+    min-width: 250px;
 }
 
 .recording-card .header span {
-    margin-right: 0.3rem; 
+    display: inline-block;
 }
 
-/* De-emphasize the separators */
+/* De-emphasize separators */
 .recording-card .header .separator {
-    color: #94a3b8;
-    font-weight: 400;
-    font-size: 0.9rem;
+    color: var(--border-focus);
+    font-weight: 300;
+    margin: 0 0.15rem;
 }
 
-/* Container for the badges */
+/* Container for badges */
 .header-badges {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem; /* Automatically spaces multiple badges */
-    flex-shrink: 0; /* Prevents the badges from shrinking when text gets long */
-    justify-content: flex-end;
+    gap: 0.4rem; 
+    justify-content: flex-start;
 }
 
 /* --- Badges --- */
- .media-type-badge {
-    text-transform: capitalize;
-    background: linear-gradient(135deg, #0ea5e9, #3b82f6);
-    color: #fff;
-    font-size: 0.75rem;
-    font-weight: 600;
+.media-type-badge, .nft-badge, .non-encora-badge, .commission-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 700;
     padding: 0.25rem 0.75rem;
-    border-radius: 12px;
+    border-radius: 50px;
     letter-spacing: 0.5px;
-    box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
-    margin: 0; /* Resetting margin since the parent container handles it now */
+    color: #ffffff;
+    box-shadow: var(--shadow-sm);
+    text-transform: uppercase;
 }
 
- .nft-badge {
-    text-transform: uppercase;
-    background: linear-gradient(135deg, #f43f5e, #f97316);
-    color: #fff;
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 0.25rem 0.75rem;
-    border-radius: 12px;
-    letter-spacing: 0.5px;
-    box-shadow: 0 2px 4px rgba(244, 63, 94, 0.2);
-    margin: 0;
+.media-type-badge {
+    background: var(--badge-media-gradient);
+    text-transform: capitalize;
+}
+
+.nft-badge {
+    background: var(--badge-nft-gradient);
 }
 
 .non-encora-badge {
-    text-transform: uppercase;
-    background: linear-gradient(135deg, #34d399, #10b981); /* Emerald green gradient */
-    color: #fff;
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 0.25rem 0.75rem;
-    border-radius: 12px;
-    letter-spacing: 0.5px;
-    box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2); /* Matching shadow */
-    margin: 0;
+    background: var(--badge-non-encora-gradient);
 }
 
 .commission-badge {
-    text-transform: uppercase;
-    background: linear-gradient(135deg, #a855f7, #7e22ce); /* Vibrant Amethyst/Purple */
-    color: #fff;
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 0.25rem 0.75rem;
-    border-radius: 12px;
-    letter-spacing: 0.5px;
-    box-shadow: 0 2px 4px rgba(168, 85, 247, 0.25); /* Matching shadow */
-    margin: 0;
+    background: var(--badge-commission-gradient);
 }
 
 /* Information Sections (Cast, Notes, etc.) */
@@ -161,7 +248,8 @@ body { font-family: sans-serif; line-height: 1.6; margin: 0; background-color: #
     display: flex;
     flex-direction: row;
     align-items: baseline;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.85rem;
+    gap: 0.75rem;
 }
 
 .info-section:last-child {
@@ -169,187 +257,310 @@ body { font-family: sans-serif; line-height: 1.6; margin: 0; background-color: #
 }
 
 .info-section .label {
-    font-weight: 700;
-    font-size: 0.85rem;
-    color: #64748b;
+    font-weight: 800;
+    font-size: 0.8rem;
+    color: var(--text-muted);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    min-width: 70px; /* Keeps the text content vertically aligned */
+    letter-spacing: 0.75px;
+    min-width: 75px; 
     flex-shrink: 0;
 }
 
 .content-text {
     font-size: 0.95rem;
-    color: #334155;
+    color: var(--text-secondary);
     line-height: 1.6;
 }
 
-/* Gives the notes section a clean, colorful callout-box appearance */
+/* Notes section styling */
 .notes-text {
     font-size: 0.9rem;
-    color: #475569;
-    background: #f0fdf4; /* Very soft green */
-    padding: 0.85rem 1rem;
-    border-left: 4px solid #10b981; /* Emerald green accent border */
-    border-radius: 0 6px 6px 0;
+    color: var(--text-secondary);
+    background: #f0fdf4; 
+    padding: 0.85rem 1.25rem;
+    border-left: 4px solid #10b981; 
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
     width: 100%;
     margin-top: 0.25rem;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.01);
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 600px) {
-    .info-section {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .info-section .label {
-        margin-bottom: 0.3rem;
-    }
+/* Format block visual matching with notes */
+.info-section .notes-text {
+    background-color: #f8fafc;
+    border-left-color: #cbd5e1;
+    color: var(--text-secondary);
 }
-
 
 /* --- Landing Page Styles --- */
-
 .welcome-message {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .welcome-message h2 {
-    color: #1e293b;
-    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
 }
 
-/* Emphasized Trading Status Banner - Colorful & Trustworthy */
+.welcome-message p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Trading Status Banner */
 .trading-status {
-    background-color: #e0e7ff;
-    border-left: 5px solid #4f46e5;
+    background: linear-gradient(135deg, #e0e7ff, #e0e7ff);
+    border-left: 5px solid var(--primary);
     padding: 1.5rem;
     text-align: center;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #312e81;
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--primary-dark);
     margin-bottom: 0.5rem;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(79, 70, 229, 0.1);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
     letter-spacing: 0.5px;
 }
 
 .last-updated {
     text-align: center;
     font-size: 0.85rem;
-    color: #64748b;
+    color: var(--text-muted);
     font-style: italic;
+    margin-bottom: 2.5rem;
 }
 
 /* Two-Column Layout */
 .split-layout {
     display: flex;
     gap: 2rem;
-    justify-content: space-between;
+    margin-top: 2rem;
 }
 
-/* Styling columns to match your new recording-card style */
 .split-column {
     flex: 1;
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
 }
 
 .split-column h2 {
     margin-top: 0;
-    border-bottom: 2px solid #f1f5f9;
+    border-bottom: 2px solid var(--bg-main);
     padding-bottom: 0.75rem;
-    color: #1e293b;
-    font-size: 1.25rem;
+    color: var(--text-primary);
+    font-size: 1.4rem;
+    font-weight: 800;
 }
 
 .split-column h3 {
-    color: #4f46e5; /* Accent color for subheaders */
-    font-size: 1.05rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-    border-bottom: 1px solid #e2e8f0;
-    padding-bottom: 0.3rem;
+    color: var(--primary); 
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 0.4rem;
 }
 
 .split-column ul {
-    padding-left: 1.2rem;
+    padding-left: 1.25rem;
+    margin: 0.75rem 0;
 }
 
 .split-column li {
-    margin-bottom: 0.6rem;
-    color: #334155;
+    margin-bottom: 0.75rem;
+    color: var(--text-secondary);
     font-size: 0.95rem;
 }
 
 /* Email Link Callout */
 .email-container {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     padding-top: 1.5rem;
-    border-top: 1px solid #e2e8f0;
-    font-weight: 600;
+    border-top: 1px solid var(--border-light);
+    font-weight: 700;
+    color: var(--text-primary);
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
 .email-link {
-    display: inline-block;
-    background: #4f46e5;
+    display: inline-flex;
+    align-items: center;
+    background: var(--primary-gradient);
     color: #ffffff;
-    padding: 0.6rem 1.25rem;
-    border-radius: 6px;
+    padding: 0.65rem 1.5rem;
+    border-radius: var(--radius-sm);
     text-decoration: none;
-    margin-left: 0.5rem;
-    transition: background 0.2s ease, transform 0.2s ease;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 10px rgba(79, 70, 229, 0.2);
 }
 
 .email-link:hover {
-    background: #4338ca;
-    transform: translateY(-1px);
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(79, 70, 229, 0.3);
     text-decoration: none;
 }
 
-.upper-case{
-       text-transform: uppercase;
+.upper-case {
+    text-transform: uppercase;
 }
 
 /* Encora Button Styling */
 .encora-container {
-    margin-top: 1.25rem;
+    margin: 1.5rem 0;
     text-align: center;
-    margin-bottom: 1.25rem;
 }
 
 .encora-button {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     background: #ffffff;
-    color: #4f46e5;
-    border: 2px solid #4f46e5;
-    padding: 0.6rem 1.5rem;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    padding: 0.75rem 1.75rem;
     font-weight: 700;
     font-size: 0.95rem;
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     text-decoration: none;
-    transition: all 0.25s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: var(--shadow-sm);
 }
 
-/* Reverses the colors and adds a floating effect on hover */
 .encora-button:hover {
-    background: #4f46e5;
+    background: var(--primary);
     color: #ffffff;
     transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(79, 70, 229, 0.15);
+    box-shadow: 0 6px 15px rgba(79, 70, 229, 0.2);
     text-decoration: none;
 }
 
-/* Mobile Responsiveness for Split Layout */
+/* --- Media Queries & Responsiveness --- */
+
+/* Small Tablets / Large Mobile Devices */
 @media (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+    
+    header {
+        padding: 2rem 1rem;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav {
+        gap: 0.35rem;
+        padding: 0.5rem;
+    }
+
+    nav a {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+        flex: 1 1 calc(50% - 0.5rem); /* Two buttons per row */
+        text-align: center;
+    }
+    
+    main {
+        margin: 1.5rem auto;
+        padding: 0 1rem;
+    }
+
     .split-layout {
         flex-direction: column;
         gap: 1.5rem;
     }
+    
+    .split-column {
+        padding: 1.5rem;
+    }
+    
+    .badge-legend {
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .legend-title {
+        width: 100%;
+        margin-bottom: 0.25rem;
+    }
+    
+    .recording-card {
+        padding: 1.25rem;
+    }
 }
+
+/* Mobile Screens */
+@media (max-width: 600px) {
+    nav a {
+        flex: 1 1 100%; /* Full width buttons for easy tap on phone screens */
+    }
+
+    .recording-card .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+    }
+
+    .header-info {
+        min-width: 100%;
+    }
+    
+    .recording-card .header .separator {
+        display: none; /* Hide separators on small screens and wrap elements */
+    }
+    
+    .header-info span:not(.separator) {
+        background-color: var(--bg-main);
+        padding: 0.2rem 0.5rem;
+        font-size: 0.8rem;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--border-light);
+    }
+    
+    .header-info span:first-child {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        font-size: 1.1rem;
+        width: 100%; /* Force show title to take full width */
+        font-weight: 800;
+        margin-bottom: 0.25rem;
+    }
+
+    .header-badges {
+        margin-top: 0.25rem;
+        width: 100%;
+    }
+
+    .info-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+    
+    .info-section .label {
+        margin-bottom: 0;
+        min-width: auto;
+    }
+    
+    .notes-text {
+        padding: 0.75rem 1rem;
+    }
+}
+
